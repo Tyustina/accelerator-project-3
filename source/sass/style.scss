@@ -1,4 +1,18 @@
-// Vendor
-// ---------------------------------
-
 @import "vendor/normalize";
+
+@import "global/fonts.scss";
+@import "global/global.scss";
+@import "global/variables.scss";
+@import "global/mixin.scss";
+
+@import "blocks/button.scss";
+@import "blocks/header.scss";
+@import "blocks/about.scss";
+@import "blocks/programs.scss";
+@import "blocks/grant.scss";
+@import "blocks/news.scss";
+@import "blocks/faq.scss";
+@import "blocks/reviews.scss";
+@import "blocks/contacts.scss";
+@import "blocks/form.scss";
+@import "blocks//footer.scss";
