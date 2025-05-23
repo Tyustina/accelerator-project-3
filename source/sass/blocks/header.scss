@@ -2,3 +2,12 @@
 @use "../global/mixin.scss" as m;
 
 
+.header {
+  @include m.container;
+  position: absolute;
+  display: grid;
+  grid-template-columns: max-content max-content;
+  justify-content: space-between;
+  top: 20px;
+  z-index: 10;
+}

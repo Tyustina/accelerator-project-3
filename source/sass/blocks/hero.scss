@@ -1,0 +1,27 @@
+@use "../global/variables.scss" as v;
+@use "../global/mixin.scss" as m;
+
+.hero__slider {
+  @include m.list-reset;
+}
+
+.hero__slide {
+min-height: 568px;
+@include m.tablet {
+    min-height: 1024px;
+  }
+
+  @include m.desktop {
+    min-height: 800px;
+  }
+}
+
+.hero__slide--1 {
+  background-image: image-set(
+    url("../../img/hero-bg.jpg") 1x type("image/jpeg"),
+        url("../../img/hero-bg@2x.jpg") 2x type("image/jpeg"),
+  );
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}

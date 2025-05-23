@@ -58,21 +58,6 @@ img {
   overflow: hidden;
 }
 
-.header-hero-wrapper {
-  background-image: image-set(
-    url("../../img/hero-bg.jpg") 1x type("image/jpeg"),
-        url("../../img/hero-bg@2x.jpg") 2x type("image/jpeg"),
-  );
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  min-height: 568px;
-
-  @include m.tablet {
-    min-height: 1024px;
-  }
-
-  @include m.desktop {
-    min-height: 800px;
-  }
-}
+// .header-hero-wrapper {
+//   position: relative;
+// }

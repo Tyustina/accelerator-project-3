@@ -1,0 +1,84 @@
+@use "../global/variables.scss" as v;
+@use "../global/mixin.scss" as m;
+
+.nav {
+  z-index: 10;
+}
+
+.nav--closed .nav__button-marker::after {
+  position: absolute;
+  display: block;
+  content: "";
+  width: 20px;
+  height: 20px;
+  background-color: v.$nero;
+  mask-image: url("/__spritemap#sprite-menu-view");
+  mask-position: center;
+  mask-repeat: no-repeat;
+}
+
+.nav--opened {
+  position: absolute;
+  z-index: 50;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.nav--opened .nav__button-marker {
+  background-color: v.$nero;
+}
+
+.nav--opened .nav__button {
+  width: 290px;
+  margin: 0 auto;
+  background-color: v.$mariner;
+  color: v.$nero;
+  justify-content: space-between;
+}
+
+.nav--opened .nav__button-marker::after {
+  position: absolute;
+  display: block;
+  content: "";
+  width: 20px;
+  height: 20px;
+  background-color: v.$mariner;
+  mask-image: url("/__spritemap#sprite-cross-view");
+  mask-position: center;
+  mask-repeat: no-repeat;
+}
+
+.nav__list {
+  @include m.list-reset;
+  display: grid;
+  padding: 35px 25px;
+  background-color: v.$mariner;
+  color: v.$nero;
+  border-radius: 16px;
+  margin-top: 4px;
+}
+
+.nav__sublist {
+  @include m.list-reset;
+  display: grid;
+  gap: 16px;
+  padding-left: 16px;
+}
+
+.nav__item {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  opacity: 0.7;
+  margin-bottom: 28px;
+}
+
+.nav__subitem {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 100%;
+  opacity: 0.6;
+}

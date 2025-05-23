@@ -22,9 +22,12 @@
 }
 
 .button__marker {
-  display: block;
+  position: relative;
+  display: flex;
   width: 46px;
   height: 46px;
   background-color: v.$mariner;
   border-radius: 100%;
+  justify-content: center;
+  align-items: center;
 }

@@ -17,3 +17,22 @@
     @content;
   }
 }
+
+@mixin container {
+  width: 320px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto;
+
+  @media (min-width: v.$tablet-width) {
+    width: 768px;
+    padding-left: 45px;
+    padding-right: 45px;
+  }
+
+  @media (min-width: v.$desktop-width) {
+    width: 1440px;
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+}
