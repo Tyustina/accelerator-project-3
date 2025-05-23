@@ -1,0 +1,78 @@
+@use "../global/variables.scss" as v;
+@use "../global/mixin.scss" as m;
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  min-width: 320px;
+  font-family: "Mantrope", sans-serif;
+  font-size: 14px;
+  line-height: 100%;
+  font-weight: 400;
+  background-color: v.$nero;
+  color: v.$tundora;
+  transition: overflow 0.3s ease;
+}
+
+html {
+  height: 100%;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+}
+
+.main {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  overflow: hidden;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+*:focus-visible {
+  outline: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.header-hero-wrapper {
+  background-image: image-set(
+    url("../../img/hero-bg.jpg") 1x type("image/jpeg"),
+        url("../../img/hero-bg@2x.jpg") 2x type("image/jpeg"),
+  );
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  min-height: 568px;
+
+  @include m.tablet {
+    min-height: 1024px;
+  }
+
+  @include m.desktop {
+    min-height: 800px;
+  }
+}

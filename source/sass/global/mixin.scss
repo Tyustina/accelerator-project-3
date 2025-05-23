@@ -1,0 +1,19 @@
+@use "./variables.scss" as v;
+
+@mixin list-reset {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@mixin tablet {
+  @media (min-width: v.$tablet-width) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: v.$desktop-width) {
+    @content;
+  }
+}

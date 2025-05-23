@@ -10,21 +10,74 @@
 
 <body class="page-body">
   <!-- пример использования спрайта -->
-  <img src="/__spritemap#sprite-logo-view" alt="Это спрайт">
+  <!-- <img src="/__spritemap#sprite-logo-view" alt="Это спрайт">
   <svg>
     <use href="/__spritemap#sprite-user"></use>
-  </svg>
+  </svg> -->
   <main>
+    <h1 class="visually-hidden">Обучение за рубежом.</h1>
     <section class="header-hero-wrapper" data-test="hero">
-      <header class="header">
-        <svg class="header__logo">
-          <use href="/__spritemap#logo"></use>
-        </svg>
+      <headerhero__swiper class="header">
+        <img class="header__logo" src="/__spritemap#sprite-logo-view" width="52" height="52" alt="Логотип">
         <div class="nav">
-
+          <button class="nav__button button">Меню<span class="button__marker"></span></button>
+          <ul class="nav__list">
+            <li class="nav__item"><a>О проекте</a></li>
+            <li class="nav__item drop-down-list">Программы</li>
+            <ul class="nav__sublist drop-down-items">
+              <li class="nav__subitem"><a>Стажировки</a></li>
+              <li class="nav__subitem"><a>Волонтерство</a></li>
+              <li class="nav__subitem"><a>Учеба</a></li>
+              <li class="nav__subitem"><a>Религия</a></li>
+            </ul>
+            <li class="nav__item"><a>Как проехать</a></li>
+            <li class="nav__item"><a>Отзывы</a></li>
+            <li class="nav__item drop-down-list">Новости</li>
+            <ul class="nav__sublist drop-down-items">
+              <li class="nav__subitem"><a>Общее</a></li>
+              <li class="nav__subitem"><a>Волонтерство</a></li>
+              <li class="nav__subitem"><a>Стажировки</a></li>
+              <li class="nav__subitem"><a>Карьера</a></li>
+              <li class="nav__subitem"><a>Путешествия</a></li>
+            </ul>
+            <li class="nav__item"><a>Контакты</a></li>
+          </ul>
         </div>
-      </header>
-      <section></section>
+      </headerhero__swiper>
+      <section class="hero">
+        <h2 class="visually-hidden">Обучение за рубежом.</h2>
+        <div class="hero__swiper swiper">
+        <ul class="hero__slider swiper-wrapper">
+          <li class="hero__slide swiper-slide">
+            <div class="hero__slide-text-wrapper">
+              <h3 class="hero__title">Глобальный профессиональный опыт обучения
+                за рубежом</h3>
+              <p>Погрузитесь в академическую
+                программу, проходя практику
+                в разных городах, ощущая
+                настоящий студенческий стиль жизни!</p>
+              <button class="hero__button button">Подробнее<span class="button__marker"></span></button>
+            </div>
+          </li>
+          <li class="hero__slide swiper-slide">
+            <div class="hero__slide-text-wrapper">
+              <h3 class="hero__title">Волонтёрские программы — внесите свой вклад в общество</h3>
+              <p>Возможности для преподавания, органического сельского хозяйства, устойчивого образа жизни и другое.</p>
+              <button class="hero__button button">Подробнее<span class="button__marker"></span></button>
+            </div>
+          </li>
+          <li class="hero__slide swiper-slide">
+            <div class="hero__slide-text-wrapper">
+              <h3 class="hero__title">Программы стажировок
+в крупнейших компаниях мира</h3>
+              <p>Получите незаменимый опыт работы в ведущих мировых компаниях и государственных организациях.</p>
+              <button class="hero__button button">Подробнее<span class="button__marker"></span></button>
+            </div>
+          </li>
+        </ul>
+        <div class="hero__pagination swiper-pagination"></div>
+        </div>
+      </section>
     </section>
     <div data-test="about">about</div>
     <div data-test="programs">programs</div>

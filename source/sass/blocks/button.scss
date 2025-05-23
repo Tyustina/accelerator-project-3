@@ -1,0 +1,30 @@
+@use "../global/variables.scss" as v;
+@use "../global/mixin.scss" as m;
+
+
+.button {
+  display: flex;
+  gap: 20px;
+  background-color: v.$nero;
+  color: v.$mariner;
+  border: 1px solid v.$mariner;
+  border-radius: 30px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 100%;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  align-items: center;
+  padding-left: 20px;
+  padding-right: 4px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+.button__marker {
+  display: block;
+  width: 46px;
+  height: 46px;
+  background-color: v.$mariner;
+  border-radius: 100%;
+}
