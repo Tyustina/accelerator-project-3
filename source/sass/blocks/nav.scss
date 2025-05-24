@@ -29,12 +29,18 @@
   background-color: v.$nero;
 }
 
+.nav--closed .nav__button {
+  width: auto;
+  transition: width 3.5s ease;
+}
+
 .nav--opened .nav__button {
   width: 290px;
   margin: 0 auto;
   background-color: v.$mariner;
   color: v.$nero;
   justify-content: space-between;
+  transition: width 0.5s ease;
 }
 
 .nav--opened .nav__button-marker::after {
@@ -51,12 +57,19 @@
 
 .nav__list {
   @include m.list-reset;
-  display: grid;
+  position: absolute;
+  display: none;
   padding: 35px 25px;
   background-color: v.$mariner;
   color: v.$nero;
   border-radius: 16px;
   margin-top: 4px;
+  transition: top 0.5s ease-in-out;
+  width: 100%;
+}
+
+.nav--opened .nav__list {
+  display: grid
 }
 
 .nav__sublist {
@@ -64,6 +77,10 @@
   display: grid;
   gap: 16px;
   padding-left: 16px;
+  font-weight: 400;
+  text-transform: none;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
 }
 
 .nav__item {
@@ -74,6 +91,41 @@
   text-transform: uppercase;
   opacity: 0.7;
   margin-bottom: 28px;
+}
+
+.nav__item.drop-down-list {
+  display: grid;
+}
+
+.nav__link {
+  display: flex;
+  gap: 10px;
+}
+
+.drop-down-list--opened .nav__sublist {
+  margin-top: 20px;
+}
+.drop-down-list--opened .drop-down-marker {
+  display: block;
+  width: 12px;
+  height: 12px;
+  background-color: v.$nero;
+  mask-image: url("/__spritemap#sprite-arrow-down-view");
+  mask-repeat: no-repeat;
+  transform: rotate(180deg);
+}
+
+.drop-down-list--closed .drop-down-marker {
+  display: block;
+  width: 12px;
+  height: 12px;
+  background-color: v.$nero;
+  mask-image: url("/__spritemap#sprite-arrow-down-view");
+  mask-repeat: no-repeat;
+}
+
+.nav__item:last-child {
+  margin-bottom: 0;
 }
 
 .nav__subitem {

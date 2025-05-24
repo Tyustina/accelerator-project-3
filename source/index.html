@@ -19,27 +19,31 @@
     <section class="header-hero-wrapper" data-test="hero">
       <header class="header">
         <img class="header__logo" src="/__spritemap#sprite-logo-view" width="52" height="52" alt="Логотип">
-        <div class="nav nav--opened">
+        <div class="nav nav--closed">
           <button class="nav__button button">Меню<span class="nav__button-marker button__marker"></span></button>
           <ul class="nav__list">
             <li class="nav__item"><a>О проекте</a></li>
-            <li class="nav__item drop-down-list">Программы</li>
-            <ul class="nav__sublist drop-down-items">
-              <li class="nav__subitem"><a>Стажировки</a></li>
-              <li class="nav__subitem"><a>Волонтерство</a></li>
-              <li class="nav__subitem"><a>Учеба</a></li>
-              <li class="nav__subitem"><a>Религия</a></li>
-            </ul>
+            <li class="nav__item drop-down-list drop-down-list--opened">
+              <a class="nav__link">Программы<span class="drop-down-marker"></span></a>
+              <ul class="nav__sublist drop-down-items">
+                <li class="nav__subitem"><a>Стажировки</a></li>
+                <li class="nav__subitem"><a>Волонтерство</a></li>
+                <li class="nav__subitem"><a>Учеба</a></li>
+                <li class="nav__subitem"><a>Религия</a></li>
+              </ul>
+            </li>
             <li class="nav__item"><a>Как проехать</a></li>
             <li class="nav__item"><a>Отзывы</a></li>
-            <li class="nav__item drop-down-list">Новости</li>
-            <ul class="nav__sublist drop-down-items">
-              <li class="nav__subitem"><a>Общее</a></li>
-              <li class="nav__subitem"><a>Волонтерство</a></li>
-              <li class="nav__subitem"><a>Стажировки</a></li>
-              <li class="nav__subitem"><a>Карьера</a></li>
-              <li class="nav__subitem"><a>Путешествия</a></li>
-            </ul>
+            <li class="nav__item drop-down-list drop-down-list--closed">
+              <a class="nav__link">Новости<span class="drop-down-marker"></span></a>
+              <ul class="nav__sublist drop-down-items">
+                <li class="nav__subitem"><a>Общее</a></li>
+                <li class="nav__subitem"><a>Волонтерство</a></li>
+                <li class="nav__subitem"><a>Стажировки</a></li>
+                <li class="nav__subitem"><a>Карьера</a></li>
+                <li class="nav__subitem"><a>Путешествия</a></li>
+              </ul>
+            </li>
             <li class="nav__item"><a>Контакты</a></li>
           </ul>
         </div>
@@ -47,40 +51,97 @@
       <section class="hero">
         <h2 class="visually-hidden">Обучение за рубежом.</h2>
         <div class="hero__swiper swiper">
-        <ul class="hero__slider swiper-wrapper">
-          <li class="hero__slide hero__slide--1 swiper-slide">
-            <div class="hero__slide-text-wrapper">
-              <h3 class="hero__title">Глобальный профессиональный опыт обучения
-                за рубежом</h3>
-              <p>Погрузитесь в академическую
-                программу, проходя практику
-                в разных городах, ощущая
-                настоящий студенческий стиль жизни!</p>
-              <button class="hero__button button">Подробнее<span class="button__marker"></span></button>
-            </div>
-          </li>
-          <li class="hero__slide swiper-slide">
-            <div class="hero__slide-text-wrapper">
-              <h3 class="hero__title">Волонтёрские программы — внесите свой вклад в общество</h3>
-              <p>Возможности для преподавания, органического сельского хозяйства, устойчивого образа жизни и другое.</p>
-              <button class="hero__button button">Подробнее<span class="button__marker"></span></button>
-            </div>
-          </li>
-          <li class="hero__slide swiper-slide">
-            <div class="hero__slide-text-wrapper">
-              <h3 class="hero__title">Программы стажировок
-в крупнейших компаниях мира</h3>
-              <p>Получите незаменимый опыт работы в ведущих мировых компаниях и государственных организациях.</p>
-              <button class="hero__button button">Подробнее<span class="button__marker"></span></button>
-            </div>
-          </li>
-        </ul>
-        <div class="hero__pagination swiper-pagination"></div>
+          <ul class="hero__slider swiper-wrapper">
+            <li class="hero__slide hero__slide--1 swiper-slide">
+              <div class="hero__slide-text-wrapper">
+                <h3 class="hero__title">Глобальный профессиональный опыт обучения
+                  за рубежом</h3>
+                <p>Погрузитесь в академическую
+                  программу, проходя практику
+                  в разных городах, ощущая
+                  настоящий студенческий стиль жизни!</p>
+                <a class="hero__button button">Подробнее<span
+                    class="hero__button-marker button__marker"></span></a>
+              </div>
+            </li>
+            <li class="hero__slide swiper-slide">
+              <div class="hero__slide-text-wrapper">
+                <h3 class="hero__title">Волонтёрские программы — внесите свой вклад в общество</h3>
+                <p>Возможности для преподавания, органического сельского хозяйства, устойчивого образа жизни и другое.
+                </p>
+                <button class="hero__button button">Подробнее<span class="button__marker"></span></button>
+              </div>
+            </li>
+            <li class="hero__slide swiper-slide">
+              <div class="hero__slide-text-wrapper">
+                <h3 class="hero__title">Программы стажировок
+                  в крупнейших компаниях мира</h3>
+                <p>Получите незаменимый опыт работы в ведущих мировых компаниях и государственных организациях.</p>
+                <button class="hero__button button">Подробнее<span class="button__marker"></span></button>
+              </div>
+            </li>
+          </ul>
+          <div class="hero__pagination swiper-pagination"></div>
         </div>
       </section>
     </section>
-    <div data-test="about">about</div>
-    <div data-test="programs">programs</div>
+    <section class="about" data-test="about">
+      <h2 class="about__title title">О проекте «Стажировка»</h2>
+      <p>«Стажировка» — совместный проект
+        правительств и волонтёрских бригад.</p>
+      <div class="about__text-wrapper">
+        <h3>Наша цель</h3>
+        <p>Наша деятельность направлена
+          на повышение квалификации молодых
+          специалистов на ранних и средних
+          стадиях карьеры, предоставляя
+          им инструменты для решения сложных
+          проблем, с которыми сталкиваются в мире.
+          Цель центра — наделить этих людей
+          способностью инициировать значимые
+          изменения.</p>
+      </div>
+      <a class="about__button button">Подробнее о проекте<span class="button__marker"></span></a>
+      <ul class="about__list">
+        <li class="about__item">
+          <h3>Более 250 программ</h3>
+          <p>учебных и рабочих, разной
+            длительностью от 3 месяцев
+            до 1 года</p>
+        </li>
+        <li class="about__item">
+          <h3>Более 3000 участников</h3>
+          <p>уже успешно прошли программу от «Стажировка» и остались в разных странах</p>
+        </li>
+        <li class="about__item">
+          <h3>участники из 60 стран</h3>
+          <p>студенты со всего мира приезжают на программу
+            «Стажировки» от 3 месяцев до 1 года</p>
+        </li>
+        <li class="about__item">
+          <h3>от 4 200 $<br>до 8 400 $</h3>
+          <p>грант всем участникам
+            для комфортного прохождения
+            программы</p>
+        </li>
+      </ul>
+    </section>
+    <div class="programs" data-test="programs">
+      <h2 class="programs__title title">Программы</h2>
+      <div class="programs__slider swiper">
+        <div class="programs__toggles toggles">
+          <button class="programs__toggle toggle programs__toggle--prev"><span class="visually-hidden">Предыдущий слайд.</span></button>
+          <button class="programs__toggle toggle programs__toggle--next"><span class="visually-hidden">Следующий слайд.</span></button>
+        </div>
+        <ul class="programs__list swiper-wrapper">
+          <li class="programs__ilem swiper-slide">
+            <h3 class="programs__heading"></h3>
+            <p></p>
+            <a class="programs__button small-button" href="#"></a>
+          </li>
+        </ul>
+      </div>
+    </div>
     <div data-test="grant">grant</div>
     <div data-test="news">news</div>
     <div data-test="FAQ">FAQ</div>

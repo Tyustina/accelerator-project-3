@@ -21,7 +21,8 @@
   padding-bottom: 4px;
 }
 
-.button__marker {
+.button__marker,
+.small-button {
   position: relative;
   display: flex;
   width: 46px;
@@ -30,4 +31,17 @@
   border-radius: 100%;
   justify-content: center;
   align-items: center;
+}
+
+.button__marker::after,
+.small-button::after {
+  position: absolute;
+  display: block;
+  content: "";
+  width: 10px;
+  height: 10px;
+  background-color: v.$nero;
+  mask-image: url("/__spritemap#sprite-arrow-view");
+  mask-position: center;
+  mask-repeat: no-repeat;
 }

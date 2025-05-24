@@ -6,8 +6,10 @@
 }
 
 .hero__slide {
-min-height: 568px;
-@include m.tablet {
+  position: relative;
+  min-height: 568px;
+
+  @include m.tablet {
     min-height: 1024px;
   }
 
@@ -17,11 +19,48 @@ min-height: 568px;
 }
 
 .hero__slide--1 {
-  background-image: image-set(
-    url("../../img/hero-bg.jpg") 1x type("image/jpeg"),
-        url("../../img/hero-bg@2x.jpg") 2x type("image/jpeg"),
-  );
+  background-image: image-set(url("../../img/hero-bg.jpg") 1x type("image/jpeg"),
+      url("../../img/hero-bg@2x.jpg") 2x type("image/jpeg"),
+    );
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+}
+
+.hero__title {
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 26px;
+  color: v.$mariner;
+}
+
+.hero__slide p {
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.hero__pagination {
+  position: absolute;
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 12px;
+  top: 0;
+  z-index: 10;
+}
+
+.hero__bullet {
+  width: 8px;
+  height: 8px;
+  border: 2px solid v.$mariner;
+  border-radius: 100%;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.hero__bullet--active {
+  width: 8px;
+  height: 8px;
+  border: 2px solid v.$st-tropaz;
+  border-radius: 100%;
+  background-color: v.$st-tropaz;
 }
