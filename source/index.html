@@ -60,8 +60,7 @@
                   программу, проходя практику
                   в разных городах, ощущая
                   настоящий студенческий стиль жизни!</p>
-                <a class="hero__button button">Подробнее<span
-                    class="hero__button-marker button__marker"></span></a>
+                <a class="hero__button button">Подробнее<span class="hero__button-marker button__marker"></span></a>
               </div>
             </li>
             <li class="hero__slide swiper-slide">
@@ -130,19 +129,78 @@
       <h2 class="programs__title title">Программы</h2>
       <div class="programs__slider swiper">
         <div class="programs__toggles toggles">
-          <button class="programs__toggle toggle programs__toggle--prev"><span class="visually-hidden">Предыдущий слайд.</span></button>
-          <button class="programs__toggle toggle programs__toggle--next"><span class="visually-hidden">Следующий слайд.</span></button>
+          <button class="programs__toggle toggle programs__toggle--prev"><span
+              class="toggle__marker toggle__marker--prev"><span class="visually-hidden">Предыдущий
+                слайд.</span></span></button>
+          <button class="programs__toggle toggle programs__toggle--next"><span
+              class="toggle__marker toggle__marker--next"><span class="visually-hidden">Следующий
+                слайд.</span></span></button>
         </div>
         <ul class="programs__list swiper-wrapper">
-          <li class="programs__ilem swiper-slide">
-            <h3 class="programs__heading"></h3>
-            <p></p>
-            <a class="programs__button small-button" href="#"></a>
+          <li class="programs__item programs__item--1 swiper-slide">
+            <div class="programs__text-wrapper">
+              <h3 class="programs__heading">Стажировки</h3>
+              <p>Получите незаменимый опыт работы в крупнейших мировых компаниях.</p>
+              <a class="programs__button small-button" href="#"><span class="visually-hidden">Перейти.</span></a>
+            </div>
+          </li>
+          <li class="programs__item programs__item--2 swiper-slide">
+            <div class="programs__text-wrapper">
+              <h3 class="programs__heading">Волонтёрство</h3>
+              <p>Помогайте другим и развивайте свои лидерские качества</p>
+              <a class="programs__button small-button" href="#"><span class="visually-hidden">Перейти.</span></a>
+            </div>
+          </li>
+          <li class="programs__item programs__item--3 swiper-slide">
+            <div class="programs__text-wrapper">
+              <h3 class="programs__heading">Учёба</h3>
+              <p>Получите образование и измените своё будущее.</p>
+              <a class="programs__button small-button" href="#"><span class="visually-hidden">Перейти.</span></a>
+            </div>
           </li>
         </ul>
+        <a class="programs__button button">Все программы<span class="button__marker"></span></a>
       </div>
     </div>
-    <div data-test="grant">grant</div>
+    <div class="grant" data-test="grant">
+      <div class="grant__wrapper">
+      <h2 class="grant__title title">Как поехать</h2>
+      <div class="grant__text">
+        <p>Свяжитесь с координатором, чтобы узнать
+          полную информацию. Вы получите
+          актуальные сведения о доступных
+          программах и городах, в которых можете
+          пройти программу.</p>
+      </div>
+      <div class="grant__img"></div>
+      <h3 class="grant__heading">Чтобы получить грант
+        на обучение, вам нужно:</h3>
+      <ul class="grant__list">
+        <li class="grant__item grant__item--1">
+          <span class="grant__marker">1</span>
+          Быть в возрасте от 16 до 30 лет
+        </li>
+        <li class="grant__item grant__item--2">
+          <span class="grant__marker">2</span>
+          Иметь оконченное среднее
+          образование
+        </li>
+        <li class="grant__item grant__item--3">
+          <span class="grant__marker">3</span>
+          Иметь документально
+          подтверждённое отсутствие
+          судимости и пройти консульскую
+          проверку
+        </li>
+        <li class="grant__item grant__item--4">
+          <span class="grant__marker">4</span>
+          За последние 2 года быть
+          не больше 3х месяцев подряд
+          непрерывно в одной стране
+        </li>
+      </ul>
+    </div>
+    </div>
     <div data-test="news">news</div>
     <div data-test="FAQ">FAQ</div>
     <div data-test="reviews">reviews</div>

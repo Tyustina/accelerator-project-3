@@ -1,0 +1,79 @@
+@use "../global/variables.scss" as v;
+@use "../global/mixin.scss" as m;
+
+.grant {
+  background-color: v.$mariner;
+  color: v.$nero;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.grant__wrapper {
+  @include m.container;
+}
+
+.grant__title {
+  color: v.$nero;
+  margin-bottom: 15px;
+}
+
+.grant__text {
+  display: grid;
+  gap: 10px;
+}
+
+.grant__text p {
+  font-size: 14px;
+  line-height: 20px;
+  margin: 0;
+}
+
+.grant__img {
+  width: 290px;
+  height: 200px;
+  border-radius: 16px;
+  background-image: image-set(url("../../img/grant-img.png") 1x type("image/png"),
+      url("../../img/grant-img@2x.png") 2x type("image/png"));
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.grant__heading {
+  font-size: 18px;
+  line-height: 22px;
+  margin: 0;
+  margin-bottom: 25px;
+}
+
+.grant__list {
+  @include m.list-reset;
+  display: grid;
+  gap: 15px;
+  padding-left: 15px;
+}
+
+.grant__item {
+  position: relative;
+  padding: 25px 26px;
+  border: 1px solid v.$nero;
+  border-radius: 16px;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.grant__marker {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 100%;
+  text-transform: uppercase;
+  top: -10px;
+  left: -17px;
+  width: 32px;
+  height: 32px;
+  background-color: v.$mariner;
+}

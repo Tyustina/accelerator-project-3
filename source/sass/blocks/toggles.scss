@@ -1,0 +1,53 @@
+@use "../global/variables.scss" as v;
+@use "../global/mixin.scss" as m;
+
+.toggles {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 8px;
+}
+
+.toggle {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  width: 22px;
+  height: 22px;
+  background-color: transparent;
+  border: none;
+  border-radius: 100%;
+}
+
+.toggle__marker {
+  display: block;
+  width: 10px;
+  height: 10px;
+  mask-image: url("/__spritemap#sprite-arrow-view");
+  background-color: v.$mariner;
+}
+
+.toggle__marker--prev {
+  transform: rotate(-135deg);
+}
+
+.toggle__marker--next {
+  transform: rotate(45deg);
+}
+
+.toggle:hover .toggle__marker {
+  opacity: 0.7;
+}
+
+.toggle:focus {
+  background-color: v.$nero;
+}
+
+.toggle:focus .toggle__marker {
+  opacity: 1;
+}
+
+.toggle:active {
+  opacity: 0.7;
+}
+
