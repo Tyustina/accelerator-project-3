@@ -5,9 +5,17 @@
   @include m.list-reset;
 }
 
+.hero .swiper-slide {
+  display: flex;
+  align-items: flex-end;
+}
+
 .hero__slide {
+  @include m.container;
   position: relative;
   min-height: 568px;
+  padding-top: 20px;
+  padding-bottom: 20px;
 
   @include m.tablet {
     min-height: 1024px;
@@ -27,16 +35,23 @@
   background-position: center;
 }
 
+.hero__slide-text-wrapper {
+
+  background-color: v.$nero;
+}
+
 .hero__title {
   font-weight: 400;
   font-size: 22px;
   line-height: 26px;
   color: v.$mariner;
+  margin: 0;
 }
 
 .hero__slide p {
   font-size: 16px;
   line-height: 20px;
+  margin: 0;
 }
 
 .hero__pagination {
@@ -44,7 +59,9 @@
   display: flex;
   flex-wrap: nowrap;
   gap: 12px;
-  top: 0;
+  top: 50%;
+  background-color: v.$nero;
+  padding: 10px;
   z-index: 10;
 }
 
@@ -52,7 +69,8 @@
   width: 8px;
   height: 8px;
   border: 2px solid v.$mariner;
-  border-radius: 100%;
+  border-radius: 50%;
+  padding: 0;
   background-color: transparent;
   cursor: pointer;
 }

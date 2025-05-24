@@ -113,6 +113,7 @@
   mask-image: url("/__spritemap#sprite-arrow-down-view");
   mask-repeat: no-repeat;
   transform: rotate(180deg);
+  opacity: 1;
 }
 
 .drop-down-list--closed .drop-down-marker {
@@ -122,6 +123,7 @@
   background-color: v.$nero;
   mask-image: url("/__spritemap#sprite-arrow-down-view");
   mask-repeat: no-repeat;
+  opacity: 0.6;
 }
 
 .nav__item:last-child {
@@ -133,4 +135,21 @@
   font-size: 16px;
   line-height: 100%;
   opacity: 0.6;
+}
+
+.nav__item:hover,
+.nav__item:active,
+.nav__subitem:hover,
+.nav__subitem:focus {
+  opacity: 1;
+}
+
+.nav__item:hover .nav__sublist,
+.nav__item:active .nav__sublist {
+  opacity: 0.6;
+}
+
+.nav__item:hover .drop-down-marker,
+.nav__item:active .drop-down-marker {
+  opacity: 1;
 }
