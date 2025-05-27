@@ -12,9 +12,8 @@
 
 .hero__slide {
   @include m.container;
-  position: relative;
   min-height: 568px;
-  padding-top: 20px;
+  padding-top: 100px;
   padding-bottom: 20px;
 
   @include m.tablet {
@@ -26,25 +25,43 @@
   }
 }
 
-.hero__slide--1 {
-  background-image: image-set(url("../../img/hero-bg.jpg") 1x type("image/jpeg"),
-      url("../../img/hero-bg@2x.jpg") 2x type("image/jpeg"),
-    );
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+.hero__img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  width: 100vw;
+  height: 100%;
+  z-index: 0;
 }
 
+.hero__wrapper {
+  @include m.container;
+  display: grid;
+  padding: 0;
+}
 
 .hero__title-wrapper {
   position: relative;
-  top: 42px;
   background-color: v.$nero;
-  padding: 20px 15px 58px 14px;
+  padding: 20px 15px 16px 14px;
   border-top-right-radius: 14px;
-  --nb-r: 16px;
-  --nb-w: 0px;
-  --nb-h: 10px;
+  border-bottom-right-radius: 14px;
+
+    &::after {
+    position: absolute;
+    content: "";
+    display: block;
+    width: 10px;
+    height: 10px;
+    bottom: -9px;
+    right: 14px;
+    background-color: v.$nero;
+    mask-image: url("/__spritemap#sprite-corner-view");
+    mask-repeat: no-repeat;
+    mask-position: center;
+    transform: rotate(90deg);
+  }
 }
 
 .hero__text-button-wrapper {
@@ -69,30 +86,43 @@
   line-height: 26px;
   color: v.$mariner;
   margin: 0;
-  // background-color: v.$nero;
 }
 
 .hero__slide p {
   font-size: 16px;
   line-height: 20px;
   margin: 0;
-  // background-color: v.$nero;
 }
 
 .hero__button {
   justify-self: flex-start;
 }
 
-
 .hero__pagination {
-  position: absolute;
+  position: relative;
   display: flex;
   flex-wrap: nowrap;
+  justify-self: flex-start;
   gap: 12px;
-  top: 50%;
   background-color: v.$nero;
-  padding: 10px;
+  padding: 10px 16px;
   z-index: 10;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+
+  &::after {
+    position: absolute;
+    content: "";
+    display: block;
+    width: 10px;
+    height: 10px;
+    bottom: -1px;
+    right: -9px;
+    background-color: v.$nero;
+    mask-image: url("/__spritemap#sprite-corner-view");
+    mask-repeat: no-repeat;
+    mask-position: center;
+  }
 }
 
 .hero__bullet {

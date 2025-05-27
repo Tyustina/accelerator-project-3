@@ -3,6 +3,7 @@
 
 .about {
   @include m.container;
+  display: grid;
   padding-top: 50px;
   padding-bottom: 50px;
 }
@@ -67,4 +68,8 @@
   line-height: 20px;
   color: v.$beige;
   margin: 0;
+}
+
+.about__button {
+  justify-self: flex-start;
 }

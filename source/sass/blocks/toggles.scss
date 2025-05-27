@@ -39,7 +39,8 @@
   opacity: 0.7;
 }
 
-.toggle:focus {
+.toggle:focus,
+.toggle:active {
   background-color: v.$nero;
 }
 
@@ -47,7 +48,11 @@
   opacity: 1;
 }
 
-.toggle:active {
+.toggle:active .toggle__marker {
   opacity: 0.7;
+}
+
+.toggle:disabled {
+  background-color: v.$disabled;
 }
 

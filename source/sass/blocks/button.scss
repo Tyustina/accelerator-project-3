@@ -19,6 +19,7 @@
   padding-right: 4px;
   padding-top: 4px;
   padding-bottom: 4px;
+  transition: all 0.3s ease-in-out;
 }
 
 .button__marker {
@@ -30,6 +31,7 @@
   border-radius: 100%;
   justify-content: center;
   align-items: center;
+  transition: all 0.3s ease-in-out;
 }
 
 .small-button {
@@ -54,4 +56,91 @@
   mask-image: url("/__spritemap#sprite-arrow-view");
   mask-position: center;
   mask-repeat: no-repeat;
+}
+
+.button:hover {
+  background-color: v.$mariner;
+  color: v.$nero;
+}
+
+.button:hover .button__marker,
+.button:active .button__marker {
+  background-color: v.$nero;
+}
+
+.button:hover .button__marker::after {
+  position: absolute;
+  display: block;
+  content: "";
+  width: 10px;
+  height: 10px;
+  background-color: v.$mariner;
+  mask-image: url("/__spritemap#sprite-arrow-view");
+  mask-position: center;
+  mask-repeat: no-repeat;
+  transform: rotate(45deg);
+  transition: all 0.3s ease-in-out;
+}
+
+.button:active {
+  background-color: v.$mariner;
+  color: v.$nero70;
+}
+
+.button:active .button__marker::after {
+  position: absolute;
+  display: block;
+  content: "";
+  width: 10px;
+  height: 10px;
+  background-color: v.$mariner;
+  mask-image: url("/__spritemap#sprite-arrow-view");
+  mask-position: center;
+  mask-repeat: no-repeat;
+  transform: rotate(45deg);
+  transition: all 0.3s ease-in-out;
+  opacity: 0.7;
+}
+
+.button:focus .button__marker::after {
+  position: absolute;
+  display: block;
+  content: "";
+  width: 10px;
+  height: 10px;
+  background-color: v.$nero;
+  mask-image: url("/__spritemap#sprite-arrow-view");
+  mask-position: center;
+  mask-repeat: no-repeat;
+  transform: rotate(45deg);
+  transition: all 0.3s ease-in-out;
+}
+
+.small-button:hover {
+  background-color: v.$nero;
+}
+
+.small-button:hover::after {
+  position: absolute;
+  display: block;
+  content: "";
+  width: 10px;
+  height: 10px;
+  background-color: v.$mariner;
+  mask-image: url("/__spritemap#sprite-arrow-view");
+  mask-position: center;
+  mask-repeat: no-repeat;
+  transform: rotate(45deg);
+  transition: all 0.3s ease-in-out;
+}
+
+.small-button:active::after {
+  transform: rotate(45deg);
+  transition: all 0.3s ease-in-out;
+  opacity: 0.7;
+}
+
+.small-button:focus::after {
+  transform: rotate(45deg);
+  transition: all 0.3s ease-in-out;
 }

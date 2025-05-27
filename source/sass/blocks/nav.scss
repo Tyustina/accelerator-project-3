@@ -1,6 +1,5 @@
 @use "../global/variables.scss" as v;
 @use "../global/mixin.scss" as m;
-
 .nav {
   z-index: 10;
 }
@@ -9,6 +8,7 @@
   font-size: 14px;
   padding-top: 3px;
   padding-bottom: 3px;
+  background-color: v.$nero;
 }
 
 .nav__button-marker {
@@ -16,7 +16,22 @@
   height: 46px;
 }
 
-.nav--closed .nav__button-marker::after {
+.nav--closed .nav__button:hover .nav__button-marker::after,
+.nav--closed .nav__button:active .nav__button-marker::after {
+  position: absolute;
+  display: block;
+  content: "";
+  width: 16px;
+  height: 16px;
+  background-color: v.$mariner;
+  mask-image: url("/__spritemap#sprite-menu-view");
+  mask-position: center;
+  mask-repeat: no-repeat;
+  transform: rotate(180deg);
+}
+
+.nav--closed .nav__button-marker::after,
+.nav--closed .nav__button:focus .nav__button-marker::after {
   position: absolute;
   display: block;
   content: "";
@@ -26,14 +41,24 @@
   mask-image: url("/__spritemap#sprite-menu-view");
   mask-position: center;
   mask-repeat: no-repeat;
+  transform: none;
 }
 
 .nav--opened {
   position: absolute;
-  z-index: 50;
   top: 0;
   left: 50%;
   transform: translateX(-50%);
+
+  @include m.tablet {
+    left: unset;
+    right: 45px;
+    transform: none;
+  }
+
+  @include m.desktop {
+    right: 100px;
+  }
 }
 
 .nav--opened .nav__button-marker {
@@ -42,7 +67,7 @@
 
 .nav--closed .nav__button {
   width: auto;
-  transition: width 3.5s ease;
+  transition: all 0.3s ease;
 }
 
 .nav--opened .nav__button {
@@ -51,7 +76,7 @@
   background-color: v.$mariner;
   color: v.$nero;
   justify-content: space-between;
-  transition: width 0.5s ease;
+  transition: all 0.3s ease;
 }
 
 .nav--opened .nav__button-marker::after {
@@ -64,6 +89,23 @@
   mask-image: url("/__spritemap#sprite-cross-view");
   mask-position: center;
   mask-repeat: no-repeat;
+  transition: all 0.3s ease;
+}
+
+.nav--opened .nav__button:hover .nav__button-marker::after,
+.nav--opened .nav__button:active .nav__button-marker::after,
+.nav--opened .nav__button:focus .nav__button-marker::after {
+    position: absolute;
+  display: block;
+  content: "";
+  width: 16px;
+  height: 16px;
+  background-color: v.$mariner;
+  mask-image: url("/__spritemap#sprite-cross-view");
+  mask-position: center;
+  mask-repeat: no-repeat;
+  transition: all 0.3s ease;
+  transform: rotate(180deg);
 }
 
 .nav__list {

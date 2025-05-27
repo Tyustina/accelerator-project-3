@@ -1,15 +1,27 @@
 @use "../global/variables.scss" as v;
 @use "../global/mixin.scss" as m;
 
+.header-hero-wrapper {
+  position: relative;
+}
 
 .header {
   @include m.container;
   position: absolute;
+  left: calc(50% - 160px);
   display: grid;
   grid-template-columns: max-content max-content;
   justify-content: space-between;
   top: 20px;
-  z-index: 10;
+  z-index: 3;
+
+  @include m.tablet {
+    left: calc(50% - 384px);
+  }
+
+  @include m.desktop {
+    left: calc(50% - 720px);
+  }
 }
 
 .header__logo {
