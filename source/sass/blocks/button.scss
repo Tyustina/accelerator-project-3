@@ -20,6 +20,12 @@
   padding-top: 4px;
   padding-bottom: 4px;
   transition: all 0.3s ease-in-out;
+
+  @include m.tablet {
+    font-size: 14px;
+    padding-left: 31px;
+    gap: 30px;
+  }
 }
 
 .button__marker {
@@ -32,6 +38,11 @@
   justify-content: center;
   align-items: center;
   transition: all 0.3s ease-in-out;
+
+  @include m.tablet {
+    width: 46px;
+    height: 46px;
+  }
 }
 
 .small-button {
