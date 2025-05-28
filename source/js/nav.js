@@ -1,3 +1,4 @@
+const bodyPage = document.querySelector('.page-body');
 const nav = document.querySelector('.nav');
 const dropDownLists = nav.querySelectorAll('.drop-down-list');
 const navBtn = nav.querySelector('.nav__button');
@@ -46,9 +47,11 @@ function showDropDown() {
 function showOverlay() {
   overlay.style.opacity = '1 ';
   overlay.style.display = 'flex';
+  bodyPage.classList.add('no-scroll');
 }
 
 function hideOverlay() {
   overlay.style.opacity = '0 ';
   overlay.style.display = 'none';
+  bodyPage.classList.remove('no-scroll');
 }

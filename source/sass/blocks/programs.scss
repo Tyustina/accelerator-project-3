@@ -18,6 +18,14 @@
   margin: 0;
 }
 
+.programs__img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 12px;
+  z-index: 1;
+}
+
 .programs__title {
   margin-bottom: 35px;
 }
@@ -27,6 +35,10 @@
   min-height: 400px;
   border-radius: 12px;
   padding: 18px 10px;
+
+  @include m.tablet {
+    min-height: 420px;
+  }
 }
 
 .programs__item::before {
@@ -39,15 +51,6 @@
   left: 0;
   border-radius: 12px;
   z-index: 2;
-}
-
-.programs__item--1 {
-  background-image: image-set(url("../../img/programs-1.jpg") 1x type("image/jpeg"),
-      url("../../img/programs-1@2x.jpg") 2x type("image/jpeg"),
-    );
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
 }
 
 .programs__wrapper {

@@ -36,6 +36,14 @@
       url("../../img/grant-img@2x.png") 2x type("image/png"));
   margin-top: 30px;
   margin-bottom: 30px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @include m.tablet {
+    width: 678px;
+    height: 375px;
+  }
 }
 
 .grant__heading {
@@ -50,6 +58,13 @@
   display: grid;
   gap: 15px;
   padding-left: 15px;
+
+  @include m.tablet {
+    grid-template-columns: 1fr 1fr;
+    column-gap: 48px;
+    row-gap: 25px;
+
+  }
 }
 
 .grant__item {
