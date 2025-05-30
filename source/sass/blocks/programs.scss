@@ -2,10 +2,20 @@
 @use "../global/mixin.scss" as m;
 
 .programs {
+
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.programs .swiper {
   @include m.container;
   position: relative;
-  padding-top: 55px;
-  padding-bottom: 50px;
+  padding-top: 5px;
+
+  @include m.tablet {
+    padding-top: 3px;
+    padding-bottom: 62px;
+  }
 }
 
 .programs .swiper-slide {
@@ -28,6 +38,10 @@
 
 .programs__title {
   margin-bottom: 35px;
+
+  @include m.tablet {
+    margin-bottom: 43px;
+  }
 }
 
 .programs__item {
@@ -38,6 +52,7 @@
 
   @include m.tablet {
     min-height: 420px;
+    padding: 10px 20px;
   }
 }
 
@@ -59,6 +74,11 @@
   --nb-r: 12px;
   --nb-w: 100px;
   --nb-h: 18px;
+
+  @include m.tablet {
+    --nb-w: 86px;
+    --nb-h: 13px;
+  }
 }
 
 .programs__wrapper h3 {
@@ -67,12 +87,34 @@
   line-height: 18px;
   color: v.$mariner;
   margin: 0;
+
+  @include m.tablet {
+    font-size: 20px;
+    line-height: 14px;
+  }
+
+  @include m.desktop {
+    font-size: 24px;
+    line-height: 17px;
+  }
 }
 
 .programs__wrapper p {
   font-size: 12px;
   line-height: 14px;
   margin: 0;
+
+  @include m.tablet {
+    width: 94%;
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+
+  @include m.desktop {
+    width: 90%;
+    line-height: 18px;
+  }
 }
 
 .programs__button {
@@ -82,6 +124,14 @@
   padding-left: 31px;
   margin-top: 30px;
   gap: 30px;
+
+  @include m.tablet {
+    position: absolute;
+    top: -30px;
+    right: 0;
+    padding-top: 4px;
+    padding-bottom: 4px;
+  }
 }
 
 .programs__title-wrapper {
@@ -101,10 +151,20 @@
   background-color: v.$nero;
   border-bottom-left-radius: 12px;
   border-bottom-right-radius: 12px;
+
+
+  @include m.desktop {
+    gap: 15px;
+  }
 }
 
 .programs__toggles {
   position: absolute;
   top: -2px;
   right: 0;
+
+  @include m.tablet {
+    top: unset;
+    bottom: 0;
+  }
 }

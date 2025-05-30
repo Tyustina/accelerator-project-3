@@ -52,7 +52,9 @@
   opacity: 0.7;
 }
 
-.toggle:disabled {
+.toggle:disabled .toggle__marker {
   background-color: v.$disabled;
+  pointer-events: none;
+  cursor: default;
 }
 
