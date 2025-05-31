@@ -6,4 +6,5 @@
 import './hero.js';
 import './nav.js';
 import './programs.js';
+import './faq.js';
 

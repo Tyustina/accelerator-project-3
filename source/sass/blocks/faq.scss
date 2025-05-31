@@ -1,0 +1,123 @@
+@use "../global/variables.scss" as v;
+@use "../global/mixin.scss" as m;
+
+.faq {
+  @include m.container;
+  display: grid;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.faq__title {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.faq__list {
+  @include m.list-reset;
+  display: grid;
+  gap: 10px;
+}
+
+.faq__item {
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr max-content;
+  column-gap: 20px;
+  padding: 22px 17px;
+  border: 2px solid v.$mariner;
+  border-radius: 14px;
+  cursor: pointer;
+
+  @include m.tablet {
+    padding: 32px;
+  }
+
+  @include m.desktop {
+    padding: 42px;
+  }
+}
+
+.faq__item--opened {
+  background-color: v.$mariner;
+}
+
+.faq__item--opened .faq__heading {
+  color: v.$nero;
+}
+
+.faq__item--opened .faq__button {
+  background-color: v.$nero;
+}
+
+.faq__item--opened .faq__button::before {
+  position: absolute;
+  content: "";
+  width: 20px;
+  height: 20px;
+  mask-image: url(/__spritemap#sprite-minus-view);
+  mask-position: center;
+  mask-repeat: no-repeat;
+  background-color: v.$mariner;
+}
+
+.faq__heading {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  margin: 0;
+  color: v.$mariner;
+
+  @include m.tablet {
+    font-size: 22px;
+    line-height: 26px;
+    width: 70%;
+  }
+
+  @include m.desktop {
+    font-size: 28px;
+    line-height: 34px;
+  }
+}
+
+.faq__text {
+  display: grid;
+  gap: 10px;
+  grid-column: 1/-1;
+  color: v.$nero;
+  font-size: 14px;
+  line-height: 20px;
+
+  @include m.desktop {
+    font-size: 16px;
+    line-height: 26px;
+  }
+}
+
+.faq__text p {
+  margin: 0;
+}
+
+.faq__button {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 30px;
+  border: 1px solid transparent;
+  background-color: v.$mariner;
+  cursor: pointer;
+}
+
+.faq__button::before {
+  position: absolute;
+  content: "";
+  width: 20px;
+  height: 20px;
+  background-color: v.$nero;
+  mask-image: url(/__spritemap#sprite-plus-view);
+  mask-position: center;
+  mask-repeat: no-repeat;
+}
