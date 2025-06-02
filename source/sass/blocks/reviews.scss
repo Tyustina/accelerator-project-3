@@ -1,0 +1,176 @@
+@use "../global/variables.scss" as v;
+@use "../global/mixin.scss" as m;
+
+.reviews {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.reviews .swiper {
+  @include m.container;
+  position: relative;
+  display: grid;
+}
+
+.reviews__title {
+  margin-bottom: 30px;
+}
+.reviews .swiper-wrapper {
+  display: flex;
+  padding-left: 0;
+  margin: 0;
+}
+
+.reviews .swiper-slide {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  border: 2px solid v.$mariner;
+  border-radius: 16px;
+  padding: 32px 17px;
+
+  @include m.tablet {
+    padding: 52px;
+  }
+
+  @include m.desktop {
+    padding: 52px 48px 78px 52px;
+  }
+}
+
+.reviews__toggles {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.reviews__scrollbar {
+  position: relative;
+  width: 70%;
+  height: 2px;
+  background-color: v.$mariner;
+  bottom: 0;
+}
+
+.reviews__wrapper {
+  display: grid;
+  gap: 15px;
+
+  @include m.tablet {
+    grid-template-columns: 1fr max-content;
+    gap: 65px;
+  }
+}
+
+.reviews__user {
+  display: flex;
+  gap: 10px;
+
+  @include m.tablet {
+    gap: 15px;
+  }
+}
+
+.reviews__img {
+  border-radius: 30px;
+
+  @include m.tablet {
+    width: 90px;
+    height: 90px;
+    border-radius: 45px;
+  }
+}
+
+.reviews__name {
+  font-size: 14px;
+  line-height: 18px;
+  color: v.$mariner;
+  margin: 0;
+  align-self: center;
+
+  @include m.tablet {
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  @include m.desktop {
+    font-size: 18px;
+    line-height: 24px;
+  }
+}
+
+.reviews__info {
+  display: grid;
+  grid-template-columns: max-content max-content;
+  column-gap: 25px;
+  row-gap: 8px;
+
+  @include m.tablet {
+    grid-column: 2/-1;
+    margin-bottom: 0;
+    align-self: center;
+  }
+}
+
+.reviews__info-title {
+  font-size: 12px;
+  line-height: 12px;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+  color: v.$mariner;
+  grid-row: 1/2;
+}
+
+.reviews__info-text {
+  font-size: 12px;
+  line-height: 117%;
+  color: v.$tundora;
+  margin: 0;
+  opacity: 0.9;
+  grid-row: 2/3;
+
+  @include m.desktop {
+    font-size: 14px;
+    line-height: 18px;
+  }
+}
+
+.reviews__text {
+  display: grid;
+  gap: 20px;
+
+  @include m.tablet {
+    grid-column: 1/-1;
+    gap: 25px;
+  }
+
+}
+
+.reviews__text .reviews__quote {
+  font-size: 16px;
+  line-height: 18px;
+  color: v.$mariner;
+  margin: 0;
+
+  @include m.tablet {
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  @include m.desktop {
+    font-size: 24px;
+    line-height: 26px;
+  }
+}
+
+.reviews__text p {
+  font-size: 14px;
+  line-height: 20px;
+  color: v.$tundora;
+  margin: 0;
+
+  @include m.tablet {
+    font-size: 16px;
+    line-height: 20px;
+  }
+}

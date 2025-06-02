@@ -6,17 +6,35 @@
   display: grid;
   padding-top: 50px;
   padding-bottom: 50px;
+
+  @include m.desktop {
+      padding-top: 70px;
+  padding-bottom: 6ß0px;
+  }
 }
 
 .faq__title {
   text-align: center;
   margin-bottom: 30px;
+
+  @include m.tablet {
+    margin-bottom: 40px;
+  }
+
+  @include m.desktop {
+    margin-bottom: 72px;
+  }
 }
 
 .faq__list {
   @include m.list-reset;
   display: grid;
   gap: 10px;
+
+  @include m.desktop {
+    width: 1028px;
+    margin: 0 auto;
+  }
 }
 
 .faq__item {
@@ -24,17 +42,17 @@
   align-items: center;
   grid-template-columns: 1fr max-content;
   column-gap: 20px;
-  padding: 22px 17px;
+  padding: 20px 15px;
   border: 2px solid v.$mariner;
   border-radius: 14px;
   cursor: pointer;
 
   @include m.tablet {
-    padding: 32px;
+    padding: 30px;
   }
 
   @include m.desktop {
-    padding: 42px;
+    padding: 40px;
   }
 }
 
@@ -71,7 +89,6 @@
   @include m.tablet {
     font-size: 22px;
     line-height: 26px;
-    width: 70%;
   }
 
   @include m.desktop {
@@ -80,22 +97,37 @@
   }
 }
 
+.faq__item:nth-child(4) .faq__heading {
+  @include m.tablet {
+    width: 80%;
+  }
+
+  @include m.desktop {
+    width: 90%;
+  }
+}
 .faq__text {
   display: grid;
   gap: 10px;
   grid-column: 1/-1;
   color: v.$nero;
-  font-size: 14px;
-  line-height: 20px;
-
-  @include m.desktop {
-    font-size: 16px;
-    line-height: 26px;
-  }
 }
 
 .faq__text p {
+  font-size: 14px;
+  line-height: 20px;
   margin: 0;
+
+  @include m.tablet {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+    @include m.desktop {
+    font-size: 16px;
+    line-height: 26px;
+  }
+
 }
 
 .faq__button {

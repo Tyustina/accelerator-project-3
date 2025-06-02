@@ -261,43 +261,43 @@
     <div class="grant" data-test="grant">
       <div class="grant__wrapper">
         <div class="grant__wrapper--1">
-        <h2 class="grant__title title">Как поехать</h2>
-        <div class="grant__text">
-          <p>Свяжитесь с координатором, чтобы узнать
-            полную информацию. Вы получите
-            актуальные сведения о доступных
-            программах и городах, в которых можете
-            пройти программу.</p>
-        </div>
-        <div class="grant__img"></div>
+          <h2 class="grant__title title">Как поехать</h2>
+          <div class="grant__text">
+            <p>Свяжитесь с координатором, чтобы узнать
+              полную информацию. Вы получите
+              актуальные сведения о доступных
+              программах и городах, в которых можете
+              пройти программу.</p>
+          </div>
+          <div class="grant__img"></div>
         </div>
         <div class="grant__wrapper--2">
-        <h3 class="grant__heading">Чтобы получить грант
-          на обучение, вам нужно:</h3>
-        <ul class="grant__list">
-          <li class="grant__item grant__item--1">
-            <span class="grant__marker">1</span>
-            Быть в возрасте от 16 до 30 лет
-          </li>
-          <li class="grant__item grant__item--2">
-            <span class="grant__marker">2</span>
-            Иметь оконченное среднее
-            образование
-          </li>
-          <li class="grant__item grant__item--3">
-            <span class="grant__marker">3</span>
-            Иметь документально
-            подтверждённое отсутствие
-            судимости и пройти консульскую
-            проверку
-          </li>
-          <li class="grant__item grant__item--4">
-            <span class="grant__marker">4</span>
-            За последние 2 года быть
-            не больше 3х месяцев подряд
-            непрерывно в одной стране
-          </li>
-        </ul>
+          <h3 class="grant__heading">Чтобы получить грант
+            на обучение, вам нужно:</h3>
+          <ul class="grant__list">
+            <li class="grant__item grant__item--1">
+              <span class="grant__marker">1</span>
+              Быть в возрасте от 16 до 30 лет
+            </li>
+            <li class="grant__item grant__item--2">
+              <span class="grant__marker">2</span>
+              Иметь оконченное среднее
+              образование
+            </li>
+            <li class="grant__item grant__item--3">
+              <span class="grant__marker">3</span>
+              Иметь документально
+              подтверждённое отсутствие
+              судимости и пройти консульскую
+              проверку
+            </li>
+            <li class="grant__item grant__item--4">
+              <span class="grant__marker">4</span>
+              За последние 2 года быть
+              не больше 3х месяцев подряд
+              непрерывно в одной стране
+            </li>
+          </ul>
         </div>
       </div>
     </div>
@@ -352,7 +352,7 @@
         </li>
         <li class="faq__item">
           <h3 class="faq__heading">Признаётся ли учёба
-            в рамках проекта для&nbsp;дальнейшего обучения?</h3>
+            в рамках проекта для дальнейшего обучения?</h3>
           <button class="faq__button"></button>
           <div class="faq__text">
             <p>Полная стоимость определяется
@@ -387,7 +387,7 @@
     <section class="reviews" data-test="reviews">
       <div class="reviews__slider swiper">
         <h2 class="reviews__title title">Отзывы</h2>
-        <div class="reviews_toggles toggles">
+        <div class="reviews__toggles toggles">
           <button class="reviews__toggle toggle reviews__toggle--prev"><span
               class="toggle__marker toggle__marker--prev"><span class="visually-hidden">Предыдущий
                 слайд.</span></span></button>
@@ -397,24 +397,99 @@
         </div>
         <ul class="reviews__list swiper-wrapper">
           <li class="reviews__item swiper-slide">
-            <picture>
-              <img class="reviews__img" src="" alt="">
-            </picture>
-            <dl>
-              <dt></dt>
-              <dd></dd>
-              <dt></dt>
-              <dd></dd>
-            </dl>
-            <p></p>
-            <div>
-              <p></p>
+            <div class="reviews__wrapper">
+              <div class="reviews__user">
+                <picture>
+                  <img class="reviews__img" src="./img/reviews/avatar-1.jpg" srcset="./img/reviews/avatar-1@2x.jpg"
+                    width="60" height="60" alt="">
+                </picture>
+                <p class="reviews__name">Лола<br>Алекс</p>
+              </div>
+              <dl class="reviews__info">
+                <dt class="reviews__info-title">Программа</dt>
+                <dd class="reviews__info-text">Masa Art Challenge</dd>
+                <dt class="reviews__info-title">Дата</dt>
+                <dd class="reviews__info-text">Осень 2022</dd>
+              </dl>
+            </div>
+            <div class="reviews__text">
+              <p class="reviews__quote">Я могу с уверенностью сказать,
+                что это был один из самых
+                незабываемых опытов в жизни!</p>
+              <p>Я рекомендую программу
+                «Стажировка» всем студентам,
+                желающим получить незабываемые
+                впечатления. Сочетание
+                путешествий, общения и значимой
+                работы действительно отличает
+                её от других программ, и я чувствую
+                огромную благодарность
+                за предоставленную
+                мне возможность.</p>
+            </div>
+          </li>
+          <li class="reviews__item swiper-slide">
+            <div class="reviews__wrapper">
+              <div class="reviews__user">
+                <picture>
+                  <img class="reviews__img" src="./img/reviews/avatar-2.jpg" srcset="./img/reviews/avatar-2@2x.jpg"
+                    width="60" height="60" alt="">
+                </picture>
+                <p class="reviews__name">Давид<br>Иванов</p>
+              </div>
+
+              <dl class="reviews__info">
+                <dt class="reviews__info-title">Программа</dt>
+                <dd class="reviews__info-text">Volunteer Chance</dd>
+                <dt class="reviews__info-title">Дата</dt>
+                <dd class="reviews__info-text">Лето 2022</dd>
+              </dl>
+            </div>
+            <div class="reviews__text">
+              <p class="reviews__quote">Благодаря опыту стажировки я узнал
+                так много нового о себе и об окружающем
+                мире.</p>
+              <p>Каждый день был возможностью оказать ощутимое влияние
+                на жизнь других людей. Я бы очень рекомендовал
+                эту волонтёрскую программу всем, кто ищет значимый
+                и незабываемый опыт. Организация была на высшем уровне.
+                Для меня было честью быть частью такой удивительной
+                инициативы.</p>
             </div>
           </li>
         </ul>
+        <div class="reviews__scrollbar swiper-scrollbar"></div>
       </div>
     </section>
-    <div data-test="contacts">contacts</div>
+    <section class="contacts" data-test="contacts">
+      <div class="contacts__container">
+        <div class="contacts__wrapper">
+        <h2 class="contacts__title title">Контакты</h2>
+        <ul class="contacts__list">
+          <li class="contacts__item">
+            <h3 class="contacts__heading">Центральный офис</h3>
+            <p class="contacts__desc">г. Новосибирск, ул. Щетинкина 68,
+              культурный центр</p>
+          </li>
+          <li class="contacts__item">
+            <h3 class="contacts__heading">Телефон</h3>
+            <a class="contacts__desc" href="tel:896387687676">+7 963 876 876 76</a>
+          </li>
+          <li class="contacts__item">
+            <h3 class="contacts__heading">Email</h3>
+            <a class="contacts__desc" href="mailto:Info@stazh.ru">Info@stazh.ru</a>
+          </li>
+        </ul>
+        </div>
+        <div class="contacts__map">
+          <picture>
+            <source media="(min-width: 1440px)" srcset="./img/map/map-desk.png 1x, ./img/map/map-desk@2x.png 2x" width="1240" height="486">
+            <source media="(min-width: 768px)" srcset="./img/map/map-tab.png 1x, ./img/map/map-tab@2x.png 2x" width="678" height="500">
+            <img src="./img/map/map.png" srcset="./img/map/map@2x.png" width="368" height="240" alt="">
+          </picture>
+        </div>
+      </div>
+    </section>
     <div data-test="form">form</div>
     <div data-test="footer">footer</div>
     <script type="module" src="js/main.js"></script>
