@@ -7,9 +7,12 @@
 @import "global/variables.scss";
 @import "global/mixin.scss";
 
+@import "blocks/custom-select.scss";
 @import "blocks/button.scss";
 @import "blocks/title.scss";
+@import "blocks/socials.scss";
 @import "blocks/toggles.scss";
+@import "blocks/nav.scss";
 @import "blocks/header.scss";
 @import "blocks/hero.scss";
 @import "blocks/about.scss";
@@ -21,4 +24,3 @@
 @import "blocks/contacts.scss";
 @import "blocks/form.scss";
 @import "blocks/footer.scss";
-@import "blocks/nav.scss";

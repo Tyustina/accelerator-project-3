@@ -1,0 +1,115 @@
+@use "../global/variables.scss" as v;
+@use "../global/mixin.scss" as m;
+
+.socials__list {
+  @include m.list-reset;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+
+  @include m.tablet {
+    gap: 15px;
+    justify-content: flex-end;
+  }
+
+  @include m.desktop {
+    gap: 10px;
+    margin: 0;
+  }
+}
+
+.socials__link {
+  position: relative;
+  display: flex;
+  content: "";
+  width: 26px;
+  height: 26px;
+  border-radius: 100%;
+  background: v.$mariner;
+
+  @include m.tablet {
+    width: 36px;
+    height: 36px;
+  }
+}
+
+.socials__link--vk::after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  content: "";
+  width: 12px;
+  height: 12px;
+  background-color: v.$nero;
+  mask-image: url("/__spritemap#sprite-vk-view");
+  mask-repeat: no-repeat;
+  mask-size: cover;
+
+  @include m.tablet {
+    width: 16px;
+    height: 16px;
+  }
+
+  // &:hover {
+  //   background-color: v.$white;
+  // }
+}
+
+.socials__link--ok::after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  content: "";
+  width: 8px;
+  height: 12px;
+  background-color: v.$nero;
+  mask-image: url("/__spritemap#sprite-ok-view");
+  mask-repeat: no-repeat;
+  mask-size: cover;
+
+  @include m.tablet {
+    width: 12px;
+    height: 16px;
+  }
+}
+
+.socials__link--reddit::after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  content: "";
+  width: 12px;
+  height: 12px;
+  background-color: v.$nero;
+  mask-image: url("/__spritemap#sprite-reddit-view");
+  mask-repeat: no-repeat;
+  mask-size: cover;
+
+  @include m.tablet {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+// .socials__link:hover {
+// }
+
+// .socials__link:focus,
+// .socials__link:focus-visible {
+// }
+
+// .socials__link:active {
+// }
+
+// .socials__link--disabled {
+// }
+
+// .socials__link--vk:hover::after,
+// .socials__link--reddit:hover::after,
+// .socials__link--ok:hover::after {
+// }

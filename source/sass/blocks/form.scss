@@ -1,0 +1,155 @@
+@use "../global/variables.scss" as v;
+@use "../global/mixin.scss" as m;
+
+.form {
+  position: relative;
+}
+
+.form__wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  border-radius: 16px;
+  background-color: v.$mariner;
+  padding: 15px;
+}
+
+.form__title {
+  color: v.$nero;
+  margin-bottom: 10px;
+}
+
+.form__text {
+  font-size: 14px;
+  line-height: 20px;
+  color: v.$beige;
+  margin: 0;
+}
+
+.form__blank {
+  display: grid;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.form__label {
+  display: grid;
+  gap: 12px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  color: v.$beige80;
+}
+
+.form__input {
+  background-color: transparent;
+  border: 1px solid v.$nero30;
+  border-radius: 8px;
+  padding: 14px 25px;
+  font-size: 14px;
+  line-height: 14px;
+  color: v.$beige;
+}
+
+.form__agree {
+  display: flex;
+  gap: 10px;
+  font-size: 14px;
+  line-height: 14px;
+  color: v.$nero;
+}
+
+.form__img {
+  width: 100vw;
+}
+
+.form__select {
+  position: relative;
+  display: grid;
+}
+
+// .form__select--closed::after {
+//   position: absolute;
+//   display: block;
+//   content: "";
+//   width: 16px;
+//   height: 16px;
+//   background-color: v.$mariner;
+//   mask-image: url("/__spritemap#sprite-menu-view");
+//   mask-position: center;
+//   mask-repeat: no-repeat;
+//   transform: rotate(180deg);
+// }
+.form__select--closed .form__select-list {
+  display: none;
+}
+
+.form__select--closed::after {
+  position: absolute;
+  display: block;
+  content: "";
+  width: 16px;
+  height: 16px;
+  right: 25px;
+  bottom: 43%;
+  transform: translateY(50%);
+  background-color: v.$nero;
+  mask-image: url("/__spritemap#sprite-arrow-down-view");
+  mask-position: center;
+  mask-repeat: no-repeat;
+  // transform: rotate(180deg);
+}
+
+.form__select--opened::after {
+  position: absolute;
+  display: block;
+  content: "";
+  width: 16px;
+  height: 16px;
+  right: 25px;
+  bottom: 32%;
+  transform: translateY(50%);
+  background-color: v.$nero;
+  mask-image: url("/__spritemap#sprite-arrow-down-view");
+  mask-position: center;
+  mask-repeat: no-repeat;
+  transform: rotate(180deg);
+}
+
+.form__select--opened .form__select-list {
+  display: flex;
+}
+
+.form__select-list {
+  @include m.list-reset;
+  position: absolute;
+  flex-direction: column;
+  top: 80px;
+  width: 100%;
+  background-color: v.$nero;
+  border: 1px solid v.$nero;
+  border-radius: 8px;
+  z-index: 5;
+}
+
+.form__select-item {
+  padding: 17px 20px;
+  color: v.$tundora;
+}
+
+.form__button {
+  width: 100%;
+  justify-content: space-between;
+  color: v.$nero;
+  border-color: v.$nero;
+}
+
+.form__button-marker {
+  background-color: v.$nero;
+}
+
+.form__button-marker::after {
+  background-color: v.$mariner;
+}

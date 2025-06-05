@@ -23,7 +23,7 @@
           <img class="header__logo" src="./img/logo.png" srcset="./img/logo@2x.png" width="52" height="52"
             alt="Логотип.">
         </picture>
-        <div class="nav nav--closed">
+        <nav class="nav nav--closed">
           <button class="nav__button button">Меню<span class="nav__button-marker button__marker"></span></button>
           <ul class="nav__list">
             <li class="nav__item"><a>О проекте</a></li>
@@ -36,7 +36,7 @@
                 <li class="nav__subitem"><a>Религия</a></li>
               </ul>
             </li>
-            <li class="nav__item"><a>Как проехать</a></li>
+            <li class="nav__item"><a>Как поехать</a></li>
             <li class="nav__item"><a>Отзывы</a></li>
             <li class="nav__item drop-down-list drop-down-list--closed">
               <a class="nav__link">Новости<span class="drop-down-marker"></span></a>
@@ -50,7 +50,7 @@
             </li>
             <li class="nav__item"><a>Контакты</a></li>
           </ul>
-        </div>
+        </nav>
       </header>
       <section class="hero">
         <h2 class="visually-hidden">Обучение за рубежом.</h2>
@@ -464,36 +464,101 @@
     <section class="contacts" data-test="contacts">
       <div class="contacts__container">
         <div class="contacts__wrapper">
-        <h2 class="contacts__title title">Контакты</h2>
-        <ul class="contacts__list">
-          <li class="contacts__item">
-            <h3 class="contacts__heading">Центральный офис</h3>
-            <p class="contacts__desc">г. Новосибирск, ул. Щетинкина 68,
-              культурный центр</p>
-          </li>
-          <li class="contacts__item">
-            <h3 class="contacts__heading">Телефон</h3>
-            <a class="contacts__desc" href="tel:896387687676">+7 963 876 876 76</a>
-          </li>
-          <li class="contacts__item">
-            <h3 class="contacts__heading">Email</h3>
-            <a class="contacts__desc" href="mailto:Info@stazh.ru">Info@stazh.ru</a>
-          </li>
-        </ul>
+          <h2 class="contacts__title title">Контакты</h2>
+          <ul class="contacts__list">
+            <li class="contacts__item">
+              <h3 class="contacts__heading">Центральный офис</h3>
+              <p class="contacts__desc">г. Новосибирск, ул. Щетинкина 68,
+                культурный центр</p>
+            </li>
+            <li class="contacts__item">
+              <h3 class="contacts__heading">Телефон</h3>
+              <a class="contacts__desc" href="tel:896387687676">+7 963 876 876 76</a>
+            </li>
+            <li class="contacts__item">
+              <h3 class="contacts__heading">Email</h3>
+              <a class="contacts__desc" href="mailto:Info@stazh.ru">Info@stazh.ru</a>
+            </li>
+          </ul>
         </div>
         <div class="contacts__map">
           <picture>
-            <source media="(min-width: 1440px)" srcset="./img/map/map-desk.png 1x, ./img/map/map-desk@2x.png 2x" width="1240" height="486">
-            <source media="(min-width: 768px)" srcset="./img/map/map-tab.png 1x, ./img/map/map-tab@2x.png 2x" width="678" height="500">
+            <source media="(min-width: 1440px)" srcset="./img/map/map-desk.png 1x, ./img/map/map-desk@2x.png 2x"
+              width="1240" height="486">
+            <source media="(min-width: 768px)" srcset="./img/map/map-tab.png 1x, ./img/map/map-tab@2x.png 2x"
+              width="678" height="500">
             <img src="./img/map/map.png" srcset="./img/map/map@2x.png" width="368" height="240" alt="">
           </picture>
         </div>
       </div>
     </section>
-    <div data-test="form">form</div>
-    <div data-test="footer">footer</div>
-    <script type="module" src="js/main.js"></script>
+    <section class="form" data-test="form">
+      <div class="form__container">
+        <div class="form__wrapper">
+          <h2 class="form__title title">Напишите нам</h2>
+          <p class="form__text">Оставьте ваши контакты, если у вас
+            остались вопросы — мы на них ответим!</p>
+            <form class="form__blank" action="">
+              <label class="form__label">Имя<input class="form__input form__input--name" type="text" name="name" id=""></label>
+              <label class="form__label">Телефон<input class="form__input form__input--tel" type="tel" name="tel"></label>
+              <label class="form__label">Ваше сообщение<textarea class="form__input form__input--text" name="message" rows="5" id=""></textarea></label>
+              <label class="form__label form__select form__select--closed">Выберите город
+                <input class="form__input form__input-select" type="text" readonly required autocomplete="off"><span class="form__select-marker"></span>
+                <ul class="form__select-list" tabindex="-1">
+                  <li class="form__select-item" tabindex="0">Екатеринбург</li>
+                  <li class="form__select-item" tabindex="0">Санкт-Петербург</li>
+                  <li class="form__select-item" tabindex="0">Москва</li>
+                  <li class="form__select-item" tabindex="0">Казань</li>
+                </ul>
+              </label>
+              <label class="form__agree" for="agree"><input type="checkbox" name="agree" id="agree" required>Я согласен на обработку моих персональных
+                данных</label>
+              <button class="form__button button" type="submit">Отправить<span class="form__button-marker button__marker"></span></button>
+            </form>
+        </div>
+
+        <picture>
+          <img class="form__img" src="./img/form/form-bg.png" srcset="./img/form/form-bg@2x.png" width="320" height="753" alt="">
+        </picture>
+      </div>
+    </section>
   </main>
+  <footer class="footer" data-test="footer">
+    <div class="footer__wrapper">
+      <picture>
+        <img src="./img/logo.png" srcset="./img/logo@2x.png" width="52" height="52" alt="Логотип.">
+      </picture>
+      <div class="footer__nav nav">
+        <ul class="footer__list nav__list">
+          <li class="footer__item nav__item"><a>О проекте</a></li>
+          <li class="footer__item nav__item"><a class="nav__link">Программы</a>
+          </li>
+          <li class="footer__item nav__item"><a>Как поехать</a></li>
+          <li class="footer__item nav__item"><a>Отзывы</a></li>
+          <li class="footer__item nav__item"><a class="nav__link">Новости</a>
+          </li>
+          <li class="footer__item nav__item"><a>Контакты</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__privacy">
+      <a class="footer__privacy-link" href="">Политика конфиденциальности</a>
+      <p class="footer__privacy-text">Стажировка © 2023 Все права защищены</p>
+    </div>
+
+    <div class="footer__socials socials">
+      <ul class="socials__list">
+        <li><a class="socials__link socials__link--vk" href="https://vk.com/"><span
+              class="visually-hidden">Вконтакте</span></a></li>
+        <li><a class="socials__link socials__link--ok" href="https://ok.ru/"><span
+              class="visually-hidden">Одноклассники</span></a></li>
+        <li><a class="socials__link socials__link--reddit" href="https://www.reddit.com/"><span
+              class="visually-hidden">Reddit</span></a></li>
+      </ul>
+    </div>
+
+  </footer>
+  <script type="module" src="js/main.js"></script>
 </body>
 
 </html>

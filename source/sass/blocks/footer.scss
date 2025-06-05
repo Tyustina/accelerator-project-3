@@ -1,0 +1,155 @@
+@use "../global/variables.scss" as v;
+@use "../global/mixin.scss" as m;
+
+.footer {
+  @include m.container;
+  display: grid;
+  padding-top: 40px;
+  padding-bottom: 40px;
+
+  @include m.tablet {
+    gap: 25px;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @include m.desktop {
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: auto;
+  }
+}
+
+.footer__wrapper {
+  display: grid;
+  gap: 20px;
+  justify-items: center;
+  margin-bottom: 20px;
+
+  @include m.tablet {
+    grid-column: 1/-1;
+    grid-template-columns: max-content 1fr;
+    align-items: center;
+    justify-content: space-between;
+    justify-items: flex-end;
+    margin-bottom: 0;
+  }
+
+  @include m.desktop {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    justify-items: flex-start;
+    gap: 52px;
+  }
+}
+
+
+.footer__nav {
+  display: grid;
+}
+
+.footer__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  column-gap: 28px;
+  row-gap: 20px;
+  position: static;
+  background-color: transparent;
+  margin: 0;
+  padding: 0;
+
+  @include m.tablet {
+    gap: 15px;
+  }
+
+  @include m.desktop {
+    gap: 30px;
+  }
+}
+
+.footer__item {
+  font-weight: 400;
+  color: v.$tundora;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+  text-transform: none;
+  opacity: 1;
+  margin: 0;
+
+  @include m.tablet {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  @include m.desktop {
+    line-height: 26px;
+  }
+}
+
+.footer__privacy {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-items: center;
+  margin-bottom: 15px;
+
+  @include m.tablet {
+    justify-items: flex-start;
+    margin-bottom: 0;
+    grid-column: 1/2;
+  }
+
+
+  @include m.desktop {
+    grid-column: 1/-1;
+    grid-row: 2/3;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+}
+
+.footer__privacy-link {
+  font-size: 12px;
+  line-height: 14px;
+  color: v.$tundora;
+
+  @include m.tablet {
+    line-height: 12px;
+  }
+
+  @include m.desktop {
+    font-size: 14px;
+    line-height: 18px;
+  }
+}
+
+.footer__privacy-text {
+  font-size: 12px;
+  line-height: 14px;
+  opacity: 0.6;
+  margin: 0;
+
+  @include m.tablet {
+    line-height: 12px;
+  }
+
+  @include m.desktop {
+    font-size: 14px;
+    line-height: 18px;
+    opacity: 1;
+  }
+}
+
+.footer__socials {
+  display: grid;
+  align-items: center;
+
+  @include m.tablet {
+    grid-column: 2/-1;
+  }
+
+  @include m.desktop {
+    grid-column: 2/-1;
+    grid-row: 1/2;
+  }
+}

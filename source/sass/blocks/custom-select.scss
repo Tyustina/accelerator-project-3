@@ -1,0 +1,8 @@
+@use "../global/variables.scss" as v;
+@use "../global/mixin.scss" as m;
+
+
+.custom-select__list {
+  position: absolute;
+  display: none;
+}
