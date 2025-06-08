@@ -13,7 +13,6 @@ selectElement.addEventListener('click', () =>{
   }
 });
 
-
 selectItems.forEach ((item)=>{
   item.addEventListener('click',()=> {
     selectInput.value = item.textContent;

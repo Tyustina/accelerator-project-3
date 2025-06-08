@@ -2,7 +2,26 @@
 @use "../global/mixin.scss" as m;
 
 .form {
+  @include m.tablet {
+   width: 768px;
+    padding: 50px 58px;
+    margin: 0 auto;;
+  }
+}
+
+.form__container {
   position: relative;
+}
+
+
+.form__img {
+  width: 100vw;
+
+  @include m.tablet {
+    border-radius: 16px;
+    width: 652px;
+    min-height: 780px;
+  }
 }
 
 .form__wrapper {
@@ -14,6 +33,12 @@
   border-radius: 16px;
   background-color: v.$mariner;
   padding: 15px;
+
+  @include m.tablet {
+    top: 0;
+    left: 0;
+    transform: none;
+  }
 }
 
 .form__title {
@@ -54,37 +79,40 @@
 }
 
 .form__agree {
+  position: relative;
   display: flex;
-  gap: 10px;
+  align-items: center;
+  width: 79%;
   font-size: 14px;
   line-height: 14px;
   color: v.$nero;
+  padding-left: 30px;
 }
 
-.form__img {
-  width: 100vw;
+.form__agree-input {
+  display: none;
 }
+
+.form__agree-marker {
+  position: absolute;
+  left: 0;
+  display: flex;
+  width: 20px;
+  height: 20px;
+  border-radius: 2px;
+  background-color: v.$nero;
+}
+
 
 .form__select {
   position: relative;
   display: grid;
 }
 
-// .form__select--closed::after {
-//   position: absolute;
-//   display: block;
-//   content: "";
-//   width: 16px;
-//   height: 16px;
-//   background-color: v.$mariner;
-//   mask-image: url("/__spritemap#sprite-menu-view");
-//   mask-position: center;
-//   mask-repeat: no-repeat;
-//   transform: rotate(180deg);
-// }
 .form__select--closed .form__select-list {
   display: none;
 }
+
 
 .form__select--closed::after {
   position: absolute;
@@ -99,7 +127,6 @@
   mask-image: url("/__spritemap#sprite-arrow-down-view");
   mask-position: center;
   mask-repeat: no-repeat;
-  // transform: rotate(180deg);
 }
 
 .form__select--opened::after {
