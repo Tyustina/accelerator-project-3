@@ -104,10 +104,11 @@
   grid-template-columns: max-content max-content;
   column-gap: 25px;
   row-gap: 8px;
+  margin: 0;
+  padding: 0;
 
   @include m.tablet {
     grid-column: 2/-1;
-    margin-bottom: 0;
     align-self: center;
   }
 }
@@ -119,6 +120,8 @@
   text-transform: uppercase;
   color: v.$mariner;
   grid-row: 1/2;
+  margin: 0;
+  padding: 0;
 }
 
 .reviews__info-text {
@@ -126,6 +129,7 @@
   line-height: 117%;
   color: v.$tundora;
   margin: 0;
+  padding: 0;
   opacity: 0.9;
   grid-row: 2/3;
 

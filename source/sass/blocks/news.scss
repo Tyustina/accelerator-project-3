@@ -1,0 +1,35 @@
+@use "../global/variables.scss" as v;
+@use "../global/mixin.scss" as m;
+
+.news__tabs {
+  @include m.list-reset;
+  display: flex;
+
+}
+
+.news__tab {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 100%;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  text-align: center;
+  color: v.$mariner;
+  background-color: transparent;
+  padding: 12px 16px;
+  border: 2px solid transparent;
+  border-radius: 20px;
+}
+
+.news__tab--active {
+  border-color: v.$mariner;
+}
+
+.swiper .news__list {
+  @include m.list-reset;
+  display: none;
+}
+
+.swiper .news__list--active {
+  display: flex;
+}
