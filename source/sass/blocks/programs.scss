@@ -5,6 +5,10 @@
 
   padding-top: 50px;
   padding-bottom: 50px;
+
+  @include m.desktop {
+    padding-top: 62px;
+  }
 }
 
 .programs .swiper {
@@ -14,18 +18,28 @@
 
   @include m.tablet {
     padding-top: 3px;
-    padding-bottom: 62px;
+    padding-bottom: 10px;
+      overflow: visible;
+  }
+
+  @include m.desktop {
+    padding-bottom: 20px;
   }
 }
 
 .programs .swiper-slide {
   display: flex;
   align-items: flex-end;
+  overflow: hidden;
 }
 
 .programs .swiper-wrapper {
   padding: 0;
   margin: 0;
+
+  @include m.desktop {
+    overflow: hidden;
+  }
 }
 
 .programs__img {
@@ -41,6 +55,10 @@
 
   @include m.tablet {
     margin-bottom: 43px;
+  }
+
+  @include m.desktop {
+    margin-bottom: 45px;
   }
 }
 
@@ -70,6 +88,8 @@
 
 .programs__wrapper {
   position: relative;
+  display: flex;
+  flex-direction: column;
   z-index: 5;
   --nb-r: 12px;
   --nb-w: 100px;
@@ -78,6 +98,13 @@
   @include m.tablet {
     --nb-w: 86px;
     --nb-h: 13px;
+  }
+
+  @include m.desktop {
+    width: 91%;
+    bottom: 7px;
+    --nb-w: 102px;
+    --nb-h: 17px;
   }
 }
 
@@ -112,7 +139,7 @@
 
 
   @include m.desktop {
-    width: 90%;
+    width: 100%;
     line-height: 18px;
   }
 }
@@ -128,9 +155,13 @@
   @include m.tablet {
     position: absolute;
     top: -30px;
-    right: 0;
+    right: 45px;
     padding-top: 4px;
     padding-bottom: 4px;
+  }
+
+  @include m.desktop {
+    right: 100px;
   }
 }
 
@@ -140,6 +171,10 @@
   background-color: v.$nero;
   border-top-left-radius: 12px;
   border-top-right-radius: 12px;
+
+  @include m.desktop {
+    padding-bottom: 14px;
+  }
 }
 
 .programs__text-button-wrapper {
@@ -155,6 +190,8 @@
 
   @include m.desktop {
     gap: 15px;
+    min-height: 74px;
+    padding-top: 5px;
   }
 }
 
@@ -166,5 +203,35 @@
   @include m.tablet {
     top: unset;
     bottom: 0;
+    right: 46px;
   }
+
+  @include m.desktop {
+    bottom: 10px;
+    right: 100px;
+  }
+}
+
+.programs__scrollbar {
+  display: none;
+
+  @include m.tablet {
+    display: block;
+    width: 562px;
+    pointer-events: all;
+    margin-top: 50px;
+    height: 2px;
+    background-color: v.$mariner20;
+  }
+
+  @include m.desktop {
+    width: 1136px;
+  }
+
+}
+
+.programs__scrollbar .swiper-scrollbar-drag {
+  width: 326px;
+  height: 2px;
+  background-color: v.$mariner;
 }

@@ -1,10 +1,10 @@
 import Swiper from 'swiper';
-import { Navigation } from 'swiper/modules';
+import { Navigation, Scrollbar } from 'swiper/modules';
 import 'swiper/css';
 
 
 new Swiper('.reviews__slider', {
-  modules: [Navigation],
+  modules: [Navigation, Scrollbar],
   loop: false,
   slidesPerView: 1,
   spaceBetween: 30,
@@ -14,9 +14,8 @@ new Swiper('.reviews__slider', {
   },
   scrollbar: {
     el: '.reviews__scrollbar',
-    snap: true,
-    scrollbarType: 'dynamic',
-    hide: false, // Установите в `true`, чтобы скрыть скроллбар, если он не нужен
+    draggable: true,
+    dragSize: 326 | 'auto',
   },
   breakpoints: {
     768: {
@@ -24,7 +23,11 @@ new Swiper('.reviews__slider', {
     },
     1440: {
       slidesPerView: 2,
+      spaceBetween: 32,
       allowTouchMove: false,
+      scrollbar: {
+        dragSize: 394 | 'auto',
+      },
     }
   }
 });

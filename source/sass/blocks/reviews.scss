@@ -2,23 +2,49 @@
 @use "../global/mixin.scss" as m;
 
 .reviews {
-  padding-top: 50px;
+  padding-top: 55px;
   padding-bottom: 50px;
+
+  @include m.tablet {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  @include m.desktop {
+    padding-top: 65px;
+    padding-bottom: 60px;
+  }
 }
 
 .reviews .swiper {
   @include m.container;
   position: relative;
   display: grid;
+
+  @include m.tablet {
+    padding-bottom: 10px;
+  }
+
 }
 
 .reviews__title {
-  margin-bottom: 30px;
+  margin-bottom: 34.5px;
+
+  @include m.tablet {
+    margin-bottom: 40px;
+  }
+
+  @include m.desktop {
+    margin-left: 3px;
+    margin-bottom: 45px;
+  }
 }
+
 .reviews .swiper-wrapper {
   display: flex;
   padding-left: 0;
   margin: 0;
+
 }
 
 .reviews .swiper-slide {
@@ -27,29 +53,57 @@
   gap: 25px;
   border: 2px solid v.$mariner;
   border-radius: 16px;
-  padding: 32px 17px;
+padding: 29px 16px 30px 15px;
 
   @include m.tablet {
-    padding: 52px;
+    gap: 30px;
+    padding: 50px;
   }
 
   @include m.desktop {
-    padding: 52px 48px 78px 52px;
+    padding: 50px 48px 50px 50px;
   }
 }
 
 .reviews__toggles {
   position: absolute;
-  top: 0;
-  right: 0;
+  top: -2px;
+  right: 15px;
+
+  @include m.tablet {
+    top: unset;
+    right: 46px;
+    bottom: 0;
+  }
+
+  @include m.desktop {
+    right: 100px;
+    bottom: 0;
+  }
 }
 
 .reviews__scrollbar {
-  position: relative;
-  width: 70%;
+  display: none;
+
+  @include m.tablet {
+    display: block;
+    width: 562px;
+    pointer-events: all;
+    margin-top: 50px;
+    height: 2px;
+    background-color: v.$mariner20;
+  }
+
+  @include m.desktop {
+    width: 1136px;
+  }
+
+}
+
+.reviews__scrollbar .swiper-scrollbar-drag {
+  width: 326px;
   height: 2px;
   background-color: v.$mariner;
-  bottom: 0;
 }
 
 .reviews__wrapper {
@@ -73,11 +127,14 @@
 
 .reviews__img {
   border-radius: 30px;
+  margin-left: -0.5px;
+  margin-top: 1.5px;
 
   @include m.tablet {
     width: 90px;
     height: 90px;
     border-radius: 45px;
+    margin: 0;
   }
 }
 
@@ -108,8 +165,14 @@
   padding: 0;
 
   @include m.tablet {
+    column-gap: 27px;
+    row-gap: 11px;
     grid-column: 2/-1;
     align-self: center;
+  }
+
+  @include m.desktop {
+    row-gap: 10px;
   }
 }
 
@@ -133,7 +196,7 @@
   opacity: 0.9;
   grid-row: 2/3;
 
-  @include m.desktop {
+  @include m.tablet {
     font-size: 14px;
     line-height: 18px;
   }
@@ -176,5 +239,10 @@
   @include m.tablet {
     font-size: 16px;
     line-height: 20px;
+  }
+
+  @include m.desktop {
+    font-size: 16px;
+    line-height: 26px;
   }
 }

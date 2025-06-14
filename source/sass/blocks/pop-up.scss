@@ -128,6 +128,32 @@
   }
 }
 
+// .pop-up__label:hover,
+// .pop-up__label:active {
+//   color: v.$disabled;
+//   opacity: 0.6;
+// }
+
+.pop-up__input:disabled {
+  color: v.$tundora;
+  opacity: 0.6;
+}
+
+.pop-up__input:hover,
+.pop-up__input:active {
+  border-color: v.$tundora;
+}
+
+.pop-up__label:has(:hover),
+.pop-up__label:has(:active) {
+  color: v.$tundora;
+}
+
+// .pop-up__label:hover {
+// color: v.$tundora;
+// }
+
+
 .pop-up__agree {
   position: relative;
   display: flex;
@@ -165,6 +191,15 @@
   background-color: v.$mariner;
 }
 
+
+.pop-up__input--invalid {
+  border-color: v.$error;
+  background-color: v.$error20;
+}
+
+.pop-up__agree-marker+.pop-up__input--invalid {
+  border-color: v$error;
+}
 
 .pop-up__select {
   position: relative;
@@ -260,9 +295,17 @@
   right: 5px;
   width: 16px;
   height: 16px;
+  padding: 15px;
   background-color: v.$mariner;
   mask-image: url("/__spritemap#sprite-cross-view");
-  mask-position: center;
   mask-repeat: no-repeat;
+  mask-size: contain;
   cursor: pointer;
+}
+
+.pop-up__message--success {
+  color: v.$mariner;
+  padding: 20px;
+  background-color: v$nero;
+
 }

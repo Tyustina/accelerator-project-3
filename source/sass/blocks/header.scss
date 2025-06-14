@@ -1,10 +1,6 @@
 @use "../global/variables.scss" as v;
 @use "../global/mixin.scss" as m;
 
-.header-hero-wrapper {
-  position: relative;
-}
-
 .header {
   @include m.container;
   position: absolute;
@@ -16,10 +12,12 @@
   z-index: 3;
 
   @include m.tablet {
+    top: 31px;
     left: calc(50% - 384px);
   }
 
   @include m.desktop {
+    top: 20px;
     left: calc(50% - 720px);
   }
 }

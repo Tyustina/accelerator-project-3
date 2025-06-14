@@ -108,17 +108,19 @@
   margin-top: 40px;
 
   @include m.tablet {
-    padding: 72px 70px;
+    padding: 71px 50px 49px 70px;
     grid-template-columns: 1fr 1fr;
     column-gap: 52px;
-    row-gap: 54px;
+    row-gap: 52px;
     margin-top: 60px;
   }
 
   @include m.desktop {
+    padding: 72px 70px;
     grid-template-columns: 484px 484px;
     padding: 72px 120px 50px 120px;
     grid-column: 1/-1;
+    row-gap: 54px;
   }
 }
 
@@ -151,16 +153,16 @@
     mask-position: center;
     mask-repeat: no-repeat;
     top: -13px;
-    left: -10px;
+    left: -11px;
   }
 
   @include m.tablet {
-    padding: 16px 21px;
+    padding: 16px 20px;
 
     &::after {
-      width: 18px;
-      height: 18px;
-      top: -8px;
+      width: 22px;
+      height: 22px;
+      top: -12px;
     }
 
     @include m.desktop {

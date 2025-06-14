@@ -2,7 +2,7 @@
 @use "../global/mixin.scss" as m;
 
 .contacts {
-  padding-top: 79px;
+  padding-top: 75px;
   padding-bottom: 70px;
   background-color: v.$mariner;
 
@@ -25,7 +25,11 @@
 .contacts__wrapper {
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 35px;
+
+  @include m.tablet {
+    gap: 30px;
+  }
   @include m.desktop {
     flex-direction: row;
     justify-content: space-between;
@@ -44,6 +48,11 @@
 
   @include m.tablet {
     flex-direction: row;
+    gap: 21px;
+  }
+
+  @include m.desktop {
+    gap: 54px;
   }
 }
 
@@ -54,6 +63,16 @@
 
   @include m.tablet {
     gap: 24px;
+  }
+
+  @include m.desktop {
+    gap: 21px;
+  }
+}
+
+.contacts__item p {
+  @include m.desktop {
+    margin-top: 2px;
   }
 }
 
@@ -81,14 +100,18 @@
 
   @include m.desktop {
     max-width: 263px;
+    line-height: 26px;
   }
 }
 
 .contacts__map {
   position: relative;
   margin-top: 62px;
-  border: 1px solid rgba(0,0,0,1);
   border-radius: 16px;
+
+  @include m.desktop {
+    margin-top: 83px;
+  }
 }
 
 .contacts__map::before {
@@ -98,6 +121,10 @@
   height: 2px;
   background-color: v.$nero;
   opacity: 0.2;
-  top: -30px;
+  top: -32px;
   left: 0;
+
+  @include m.desktop {
+    top: -42px;
+  }
 }

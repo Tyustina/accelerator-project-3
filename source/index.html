@@ -20,6 +20,7 @@
     <section class="header-hero-wrapper" data-test="hero">
       <header class="header">
         <picture>
+          <source type="image/webp" srcset="./img/logo.webp 1x, ./img/logo@2x.webp" width="52" height="52">
           <img class="header__logo" src="./img/logo.png" srcset="./img/logo@2x.png" width="52" height="52"
             alt="Логотип.">
         </picture>
@@ -56,12 +57,18 @@
         <h2 class="visually-hidden">Обучение за рубежом.</h2>
         <div class="hero__swiper swiper">
           <ul class="hero__slider swiper-wrapper">
-            <li class="hero__slide hero__slide--1 swiper-slide">
+            <li class="hero__slide swiper-slide">
               <picture>
-                <source media="(min-width: 1440px)"
+                <source media="(min-width: 1440px)" type="image/webp"
+                  srcset="./img/hero/hero-1-desk.webp, ./img/hero/hero-1-desk@2x.webp 2x" width="1440" height="800">
+                <source media="(min-width: 768px)" type="image/webp"
+                  srcset="./img/hero/hero-1-tab.webp, ./img/hero/hero-1-tab@2x.webp 2x" width="768" height="1024">
+                <source type="image/webp" srcset="./img/hero/hero-1.webp 1x, ./img/hero/hero-1@2x.webp 2x" width="320"
+                  height="568">
+                <source media="(min-width: 1440px)" type="image/jpg"
                   srcset="./img/hero/hero-1-desk.jpg, ./img/hero/hero-1-desk@2x.jpg 2x" width="1440" height="800">
-                <source media="(min-width: 768px)" srcset="./img/hero/hero-1-tab.jpg, ./img/hero/hero-1-tab@2x.jpg 2x"
-                  width="768" height="1024">
+                <source media="(min-width: 768px)" type="image/jpg"
+                  srcset="./img/hero/hero-1-tab.jpg, ./img/hero/hero-1-tab@2x.jpg 2x" width="768" height="1024">
                 <img class="hero__img" src="./img/hero/hero-1.jpg" srcset="./img/hero/hero-1@2x.jpg" width="320"
                   height="568" alt="">
               </picture>
@@ -85,10 +92,16 @@
             </li>
             <li class="hero__slide swiper-slide">
               <picture>
-                <source media="(min-width: 1440px)"
+                <source media="(min-width: 1440px)" type="image/webp"
+                  srcset="./img/hero/hero-2-desk.webp, ./img/hero/hero-2-desk@2x.webp 2x" width="1440" height="800">
+                <source media="(min-width: 768px)" type="image/webp"
+                  srcset="./img/hero/hero-2-tab.webp, ./img/hero/hero-2-tab@2x.webp 2x" width="768" height="1024">
+                <source type="image/webp" src="./img/hero/hero-2.webp 1x, ./img/hero/hero-2@2x.webp 2x" width="320"
+                  height="568">
+                <source media="(min-width: 1440px)" type="image/jpg"
                   srcset="./img/hero/hero-2-desk.jpg, ./img/hero/hero-2-desk@2x.jpg 2x" width="1440" height="800">
-                <source media="(min-width: 768px)" srcset="./img/hero/hero-2-tab.jpg, ./img/hero/hero-2-tab@2x.jpg 2x"
-                  width="768" height="1024">
+                <source media="(min-width: 768px)" type="image/jpg"
+                  srcset="./img/hero/hero-2-tab.jpg, ./img/hero/hero-2-tab@2x.jpg 2x" width="768" height="1024">
                 <img class="hero__img" src="./img/hero/hero-2.jpg" srcset="./img/hero/hero-2@2x.jpg" width="320"
                   height="568" alt="">
               </picture>
@@ -107,10 +120,17 @@
             </li>
             <li class="hero__slide swiper-slide">
               <picture>
-                <source media="(min-width: 1440px)"
+                <source media="(min-width: 1440px)" type="image/webp"
+                  srcset="./img/hero/hero-3-desk.webp, ./img/hero/hero-3-desk@2x.webp 2x" width="1440" height="800">
+                <source media="(min-width: 768px)" type="image/webp"
+                  srcset="./img/hero/hero-3-tab.webp, ./img/hero/hero-3-tab@2x.webp 2x" width="768" height="1024">
+                <source type="image/webp" srcset="./img/hero/hero-3.webp 1x, ./img/hero/hero-3@2x.webp 2x" width="320"
+                  height="568">
+
+                <source media="(min-width: 1440px)" type="image/jpg"
                   srcset="./img/hero/hero-3-desk.jpg, ./img/hero/hero-3-desk@2x.jpg 2x" width="1440" height="800">
-                <source media="(min-width: 768px)" srcset="./img/hero/hero-3-tab.jpg, ./img/hero/hero-3-tab@2x.jpg 2x"
-                  width="768" height="1024">
+                <source media="(min-width: 768px)" type="image/jpg"
+                  srcset="./img/hero/hero-3-tab.jpg, ./img/hero/hero-3-tab@2x.jpg 2x" width="768" height="1024">
                 <img class="hero__img" src="./img/hero/hero-3.jpg" srcset="./img/hero/hero-3@2x.jpg" width="320"
                   height="568" alt="">
               </picture>
@@ -155,13 +175,14 @@
           <h2 class="pop-up__title title">Напишите нам</h2>
           <p class="pop-up__text">Оставьте ваши контакты,<br>если у вас
             остались вопросы — мы на них ответим!</p>
-          <form class="pop-up__blank" action="">
+          <form class="pop-up__blank" action="https://echo.htmlacademy.ru/." method="post">
             <label class="pop-up__label">Имя<input class="pop-up__input pop-up__input--name" type="text" name="name"
-                id=""></label>
-            <label class="pop-up__label">Телефон<input class="pop-up__input pop-up__input--tel" type="tel"
-                name="tel"></label>
+                pattern="^[а-яА-Я\s]+$" title="Поле должно содержать только буквы и пробелы" required></label>
+            <label class="pop-up__label">Телефон<input class="pop-up__input pop-up__input--tel" type="tel" name="tel"
+                pattern="^[+7][0-9]{11}$" title="Пожалуйста, введите номер телефона в формате +7XXXXXXXXXX"
+                required></label>
             <label class="pop-up__label">Ваше сообщение<textarea class="pop-up__input pop-up__input--text"
-                name="message" rows="3" id=""></textarea></label>
+                name="message" rows="3" minlength="3" required></textarea></label>
             <label class="pop-up__label pop-up__select pop-up__select--closed">Выберите город
               <input class="pop-up__input pop-up__input-select" type="text" readonly required autocomplete="off"><span
                 class="pop-up__select-marker"></span>
@@ -218,10 +239,19 @@
         <ul class="programs__list swiper-wrapper">
           <li class="programs__item swiper-slide">
             <picture>
-              <source media="(min-width: 1440px)"
+              <source media="(min-width: 1440px)" type="image/webp"
+                srcset="./img/programs/programs-1-desk.webp, ./img/programs/programs-1-desk@2x.webp 2x" width="392"
+                height="420">
+              <source media="(min-width: 768px)" type="image/webp"
+                srcset="./img/programs/programs-1-tab.webp, ./img/programs/programs-1-tab@2x.webp 2x" width="324"
+                height="420">
+              <source srcset="./img/programs/programs-1.webp 1x, ./img/programs/programs-1@2x.webp 2x" width="290"
+                height="400">
+
+              <source media="(min-width: 1440px)" type="image/jpg"
                 srcset="./img/programs/programs-1-desk.jpg, ./img/programs/programs-1-desk@2x.jpg 2x" width="392"
                 height="420">
-              <source media="(min-width: 768px)"
+              <source media="(min-width: 768px)" type="image/jpg"
                 srcset="./img/programs/programs-1-tab.jpg, ./img/programs/programs-1-tab@2x.jpg 2x" width="324"
                 height="420">
               <img class="programs__img" src="./img/programs/programs-1.jpg" srcset="./img/programs/programs-1@2x.jpg"
@@ -240,10 +270,19 @@
           </li>
           <li class="programs__item swiper-slide">
             <picture>
-              <source media="(min-width: 1440px)"
+              <source media="(min-width: 1440px)" type="image/webp"
+                srcset="./img/programs/programs-2-desk.webp 1x,  ./img/programs/programs-2-desk@2x.webp 2x" width="392"
+                height="420">
+              <source media="(min-width: 768px)" type="image/webp"
+                srcset="./img/programs/programs-2-tab.webp 1x, ./img/programs/programs-2-tab@2x.webp 2x" width="324"
+                height="420">
+              <source src="./img/programs/programs-2.webp" srcset="./img/programs/programs-2@2x.webp" width="290"
+                height="400">
+
+              <source media="(min-width: 1440px)" type="image/jpg"
                 srcset="./img/programs/programs-2-desk.jpg, ./img/programs/programs-2-desk@2x.jpg 2x" width="392"
                 height="420">
-              <source media="(min-width: 768px)"
+              <source media="(min-width: 768px)" type="image/jpg"
                 srcset="./img/programs/programs-2-tab.jpg, ./img/programs/programs-2-tab@2x.jpg 2x" width="324"
                 height="420">
               <img class="programs__img" src="./img/programs/programs-2.jpg" srcset="./img/programs/programs-2@2x.jpg"
@@ -262,14 +301,23 @@
           </li>
           <li class="programs__item swiper-slide">
             <picture>
-              <source media="(min-width: 1440px)"
-                srcset="./img/programs/programs-3-desk.jpg, ./img/programs/programs-3-desk@2x.jpg 2x" width="392"
+              <source media="(min-width: 1440px)" type="image/webp"
+                srcset="./img/programs/programs-3-desk.webp 1x, ./img/programs/programs-3-desk@2x.webp 2x" width="392"
                 height="420">
-              <source media="(min-width: 768px)"
-                srcset="./img/programs/programs-3-tab.jpg, ./img/programs/programs-3-tab@2x.jpg 2x" width="324"
+              <source media="(min-width: 768px)" type="image/webp"
+                srcset="./img/programs/programs-3-tab.webp 1x, ./img/programs/programs-3-tab@2x.webp 2x" width="324"
                 height="420">
-              <img class="programs__img" src="./img/programs/programs-3.jpg" srcset="./img/programs/programs-3@2x.jpg"
-                width="290" height="400" alt="">
+                <source srcset="./img/programs/programs-3.webp 1x, ./img/programs/programs-3@2x.webp 2x" width="290"
+                height="400">
+
+                <source media="(min-width: 1440px)" type="image/jpg"
+                  srcset="./img/programs/programs-3-desk.jpg, ./img/programs/programs-3-desk@2x.jpg 2x" width="392"
+                  height="420">
+                <source media="(min-width: 768px)" type="image/jpg"
+                  srcset="./img/programs/programs-3-tab.jpg, ./img/programs/programs-3-tab@2x.jpg 2x" width="324"
+                  height="420">
+                <img class="programs__img" src="./img/programs/programs-3.jpg" srcset="./img/programs/programs-3@2x.jpg"
+                  width="290" height="400" alt="">
             </picture>
 
             <div class="programs__wrapper nebo nebo--tr">
@@ -283,8 +331,40 @@
               </div>
             </div>
           </li>
+          <li class="programs__item swiper-slide">
+            <picture>
+              <source media="(min-width: 1440px)" type="image/webp"
+                srcset="./img/programs/programs-1-desk.webp, ./img/programs/programs-1-desk@2x.webp 2x" width="392"
+                height="420">
+              <source media="(min-width: 768px)" type="image/webp"
+                srcset="./img/programs/programs-1-tab.webp, ./img/programs/programs-1-tab@2x.webp 2x" width="324"
+                height="420">
+              <source srcset="./img/programs/programs-1.webp 1x, ./img/programs/programs-1@2x.webp 2x" width="290"
+                height="400">
+
+              <source media="(min-width: 1440px)" type="image/jpg"
+                srcset="./img/programs/programs-1-desk.jpg, ./img/programs/programs-1-desk@2x.jpg 2x" width="392"
+                height="420">
+              <source media="(min-width: 768px)" type="image/jpg"
+                srcset="./img/programs/programs-1-tab.jpg, ./img/programs/programs-1-tab@2x.jpg 2x" width="324"
+                height="420">
+              <img class="programs__img" src="./img/programs/programs-1.jpg" srcset="./img/programs/programs-1@2x.jpg"
+                width="290" height="400" alt="">
+            </picture>
+            <div class="programs__wrapper nebo nebo--tr">
+              <div class="programs__title-wrapper">
+                <h3 class="programs__heading">Стажировки</h3>
+              </div>
+              <div class="programs__text-button-wrapper">
+                <p>Получите незаменимый опыт работы в крупнейших мировых компаниях.</p>
+                <a class="programs__slide-button small-button" href="page.html"><span
+                    class="visually-hidden">Перейти.</span></a>
+              </div>
+            </div>
+          </li>
         </ul>
-        <div class="programs__scroll-bar"></div>
+        <div class="programs__scrollbar swiper-scrollbar">
+        </div>
         <a class="programs__button button">Все программы<span class="button__marker"></span></a>
       </div>
     </section>
@@ -486,6 +566,8 @@
             <div class="reviews__wrapper">
               <div class="reviews__user">
                 <picture>
+                  <source type="image/webp" srcset="./img/reviews/avatar-1.webp 1x, ./img/reviews/avatar-1@2x.webp"
+                    width="60" height="60">
                   <img class="reviews__img" src="./img/reviews/avatar-1.jpg" srcset="./img/reviews/avatar-1@2x.jpg"
                     width="60" height="60" alt="">
                 </picture>
@@ -518,6 +600,73 @@
             <div class="reviews__wrapper">
               <div class="reviews__user">
                 <picture>
+                  <source srcset="./img/reviews/avatar-2.webp 1x, ./img/reviews/avatar-2@2x.webp 2x" type="image/webp"
+                    width="60" height="60">
+                  <img class="reviews__img" src="./img/reviews/avatar-2.jpg" srcset="./img/reviews/avatar-2@2x.jpg"
+                    width="60" height="60" alt="">
+                </picture>
+                <p class="reviews__name">Давид<br>Иванов</p>
+              </div>
+
+              <dl class="reviews__info">
+                <dt class="reviews__info-title">Программа</dt>
+                <dd class="reviews__info-text">Volunteer Chance</dd>
+                <dt class="reviews__info-title">Дата</dt>
+                <dd class="reviews__info-text">Лето 2022</dd>
+              </dl>
+            </div>
+            <div class="reviews__text">
+              <p class="reviews__quote">Благодаря опыту стажировки я узнал
+                так много нового о себе и об окружающем
+                мире.</p>
+              <p>Каждый день был возможностью оказать ощутимое влияние
+                на жизнь других людей. Я бы очень рекомендовал
+                эту волонтёрскую программу всем, кто ищет значимый
+                и незабываемый опыт. Организация была на высшем уровне.
+                Для меня было честью быть частью такой удивительной
+                инициативы.</p>
+            </div>
+          </li>
+          <li class="reviews__item swiper-slide">
+            <div class="reviews__wrapper">
+              <div class="reviews__user">
+                <picture>
+                  <source type="image/webp" srcset="./img/reviews/avatar-1.webp 1x, ./img/reviews/avatar-1@2x.webp"
+                    width="60" height="60">
+                  <img class="reviews__img" src="./img/reviews/avatar-1.jpg" srcset="./img/reviews/avatar-1@2x.jpg"
+                    width="60" height="60" alt="">
+                </picture>
+                <p class="reviews__name">Лола<br>Алекс</p>
+              </div>
+              <dl class="reviews__info">
+                <dt class="reviews__info-title">Программа</dt>
+                <dd class="reviews__info-text">Masa Art Challenge</dd>
+                <dt class="reviews__info-title">Дата</dt>
+                <dd class="reviews__info-text">Осень 2022</dd>
+              </dl>
+            </div>
+            <div class="reviews__text">
+              <p class="reviews__quote">Я могу с уверенностью сказать,
+                что это был один из самых
+                незабываемых опытов в жизни!</p>
+              <p>Я рекомендую программу
+                «Стажировка» всем студентам,
+                желающим получить незабываемые
+                впечатления. Сочетание
+                путешествий, общения и значимой
+                работы действительно отличает
+                её от других программ, и я чувствую
+                огромную благодарность
+                за предоставленную
+                мне возможность.</p>
+            </div>
+          </li>
+          <li class="reviews__item swiper-slide">
+            <div class="reviews__wrapper">
+              <div class="reviews__user">
+                <picture>
+                  <source srcset="./img/reviews/avatar-2.webp 1x, ./img/reviews/avatar-2@2x.webp 2x" type="image/webp"
+                    width="60" height="60">
                   <img class="reviews__img" src="./img/reviews/avatar-2.jpg" srcset="./img/reviews/avatar-2@2x.jpg"
                     width="60" height="60" alt="">
                 </picture>
@@ -544,7 +693,8 @@
             </div>
           </li>
         </ul>
-        <div class="reviews__scrollbar swiper-scrollbar"></div>
+        <div class="reviews__scrollbar swiper-scrollbar">
+        </div>
       </div>
     </section>
     <section class="contacts" data-test="contacts">
@@ -569,10 +719,16 @@
         </div>
         <div class="contacts__map">
           <picture>
-            <source media="(min-width: 1440px)" srcset="./img/map/map-desk.png 1x, ./img/map/map-desk@2x.png 2x"
-              width="1240" height="486">
-            <source media="(min-width: 768px)" srcset="./img/map/map-tab.png 1x, ./img/map/map-tab@2x.png 2x"
-              width="678" height="500">
+            <source type="image/webp" media="(min-width: 1440px)"
+              srcset="./img/map/map-desk.png 1x, ./img/map/map-desk@2x.png 2x" width="1240" height="486">
+            <source type="image/webp" media="(min-width: 768px)"
+              srcset="./img/map/map-tab.png 1x, ./img/map/map-tab@2x.png 2x" width="678" height="500">
+            <source type="image/webp" srcset="./img/map/map@2x.png" width="368" height="240" alt="">
+
+            <source type="image/png" media="(min-width: 1440px)"
+              srcset="./img/map/map-desk.png 1x, ./img/map/map-desk@2x.png 2x" width="1240" height="486">
+            <source type="image/png" media="(min-width: 768px)"
+              srcset="./img/map/map-tab.png 1x, ./img/map/map-tab@2x.png 2x" width="678" height="500">
             <img src="./img/map/map.png" srcset="./img/map/map@2x.png" width="368" height="240" alt="">
           </picture>
         </div>
@@ -584,10 +740,12 @@
           <h2 class="form__title title">Напишите нам</h2>
           <p class="form__text">Оставьте ваши контакты, если у вас
             остались вопросы — мы на них ответим!</p>
-          <form class="form__blank" action="">
+          <form class="form__blank" action="https://echo.htmlacademy.ru/.">
             <label class="form__label">Имя<input class="form__input form__input--name" type="text" name="name"
+                pattern="^[а-яА-Я\s]+$" title="Поле должно содержать только буквы и пробелы" required
                 id=""></label>
-            <label class="form__label">Телефон<input class="form__input form__input--tel" type="tel" name="tel"></label>
+            <label class="form__label">Телефон<input class="form__input form__input--tel" type="tel" name="tel" pattern="^[+78][0-9]{10}$"
+                title="Пожалуйста, введите номер телефона в формате +7XXXXXXXXXX"></label>
             <label class="form__label">Ваше сообщение<textarea class="form__input form__input--text" name="message"
                 rows="3" id=""></textarea></label>
             <label class="form__label form__select form__select--closed">Выберите город
@@ -612,24 +770,26 @@
           <h2 class="form__title pop-up__title title">Напишите нам</h2>
           <p class="form__text pop-up__text">Оставьте ваши контакты, если у вас
             остались вопросы — мы на них ответим!</p>
-          <form class="pop-up__blank" action="">
+          <form class="pop-up__blank" action="https://echo.htmlacademy.ru/.">
             <label class="form__label pop-up__label">Имя<input class="form__input pop-up__input pop-up__input--name"
-                type="text" name="name" id=""></label>
+                type="text" name="name" pattern="^[а-яА-Я\s]+$" title="Поле должно содержать только буквы и пробелы"
+                required id=""></label>
             <label class="form__label pop-up__label">Телефон<input class="form__input pop-up__input pop-up__input--tel"
-                type="tel" name="tel"></label>
+                type="tel" name="tel" pattern="^[+78][0-9]{10}$"
+                title="Пожалуйста, введите номер телефона в формате +7XXXXXXXXXX"></label>
             <label class="form__label pop-up__label">Ваше сообщение<textarea
                 class="form__input pop-up__input pop-up__input--text" name="message" rows="3" id=""></textarea></label>
-            <label class="form__label pop-up__label pop-up__select pop-up__select--closed">Выберите город
+            <label class="form__label form__select pop-up__label pop-up__select form__select--closed">Выберите город
               <input class="form__input pop-up__input pop-up__input-select" type="text" readonly required
                 autocomplete="off"><span class="form__select-marker pop-up__select-marker"></span>
-              <ul class="pop-up__select-list" tabindex="-1">
+              <ul class="form__select-list pop-up__select-list" tabindex="-1">
                 <li class="pop-up__select-item" tabindex="0">Екатеринбург</li>
                 <li class="pop-up__select-item" tabindex="0">Санкт-Петербург</li>
                 <li class="pop-up__select-item" tabindex="0">Москва</li>
                 <li class="pop-up__select-item" tabindex="0">Казань</li>
               </ul>
             </label>
-            <label class="pop-up__agree" for="agree"><span
+            <label class="form__agree pop-up__agree" for="agree"><span
                 class="form__agree-marker pop-up__agree--marker"></span><input class="pop-up__agree-input"
                 type="checkbox" name="agree" id="agree" required>Я согласен на обработку
               моих<br> персональных<br>
@@ -644,6 +804,7 @@
   <footer class="footer" data-test="footer">
     <div class="footer__wrapper">
       <picture>
+        <source type="image/webp" srcset="./img/logo.webp 1x, ./img/logo@2x.webp" width="52" height="52">
         <img src="./img/logo.png" srcset="./img/logo@2x.png" width="52" height="52" alt="Логотип.">
       </picture>
       <div class="footer__nav nav">

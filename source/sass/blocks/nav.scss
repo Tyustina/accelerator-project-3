@@ -1,5 +1,6 @@
 @use "../global/variables.scss" as v;
 @use "../global/mixin.scss" as m;
+
 .nav {
   z-index: 10;
 }
@@ -9,6 +10,17 @@
   padding-top: 3px;
   padding-bottom: 3px;
   background-color: v.$nero;
+
+  @include m.tablet {
+    gap: 20px;
+    padding-left: 20px;
+  }
+
+  @include m.desktop {
+    padding-left: 31px;
+    gap: 30px;
+  }
+
 }
 
 .nav__button-marker {
@@ -95,7 +107,7 @@
 .nav--opened .nav__button:hover .nav__button-marker::after,
 .nav--opened .nav__button:active .nav__button-marker::after,
 .nav--opened .nav__button:focus .nav__button-marker::after {
-    position: absolute;
+  position: absolute;
   display: block;
   content: "";
   width: 16px;

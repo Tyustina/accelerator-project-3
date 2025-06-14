@@ -1,4 +1,4 @@
-const bodyPage = document.querySelector('.page-body');
+export const bodyPage = document.querySelector('.page-body');
 const nav = document.querySelector('.nav');
 const dropDownLists = nav.querySelectorAll('.drop-down-list');
 const navBtn = nav.querySelector('.nav__button');
@@ -6,12 +6,10 @@ const overlay = document.querySelector('.overlay');
 
 navBtn.addEventListener('click', () => {
   if (nav.classList.contains('nav--opened')) {
-    nav.classList.remove('nav--opened');
-    nav.classList.add('nav--closed');
+    closeNav();
     hideOverlay();
   } else {
-    nav.classList.add('nav--opened');
-    nav.classList.remove('nav--closed');
+    openNav();
     showDropDown();
     showOverlay();
   }
@@ -43,7 +41,15 @@ function showDropDown() {
     });
   });
 }
+function openNav() {
+  nav.classList.add('nav--opened');
+  nav.classList.remove('nav--closed');
+}
 
+function closeNav() {
+  nav.classList.remove('nav--opened');
+  nav.classList.add('nav--closed');
+}
 export function showOverlay() {
   overlay.style.opacity = '1 ';
   overlay.style.display = 'flex';
