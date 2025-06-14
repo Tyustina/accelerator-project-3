@@ -10,3 +10,5 @@ import './faq.js';
 import './reviews.js';
 import './form.js';
 import './news.js';
+import './pop-up.js';
+import './about.js';

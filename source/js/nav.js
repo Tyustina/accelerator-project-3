@@ -44,13 +44,13 @@ function showDropDown() {
   });
 }
 
-function showOverlay() {
+export function showOverlay() {
   overlay.style.opacity = '1 ';
   overlay.style.display = 'flex';
   bodyPage.classList.add('no-scroll');
 }
 
-function hideOverlay() {
+export function hideOverlay() {
   overlay.style.opacity = '0 ';
   overlay.style.display = 'none';
   bodyPage.classList.remove('no-scroll');

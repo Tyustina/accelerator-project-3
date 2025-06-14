@@ -3,6 +3,7 @@
 
 .about {
   @include m.container;
+  position: relative;
   display: grid;
   padding-top: 50px;
   padding-bottom: 50px;
@@ -223,4 +224,13 @@
   @include m.desktop {
     margin-top: 48px;
   }
+}
+
+.about__pop-up {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+  transition: all 0.3s ease-in-out;
 }

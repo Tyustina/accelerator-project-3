@@ -150,6 +150,36 @@
           изменения.</p>
       </div>
       <a class="about__button button">Подробнее о проекте<span class="button__marker"></span></a>
+      <div class="about__pop-up pop-up pop-up--closed">
+        <div class="pop-up__wrapper">
+          <h2 class="pop-up__title title">Напишите нам</h2>
+          <p class="pop-up__text">Оставьте ваши контакты,<br>если у вас
+            остались вопросы — мы на них ответим!</p>
+          <form class="pop-up__blank" action="">
+            <label class="pop-up__label">Имя<input class="pop-up__input pop-up__input--name" type="text" name="name"
+                id=""></label>
+            <label class="pop-up__label">Телефон<input class="pop-up__input pop-up__input--tel" type="tel"
+                name="tel"></label>
+            <label class="pop-up__label">Ваше сообщение<textarea class="pop-up__input pop-up__input--text"
+                name="message" rows="3" id=""></textarea></label>
+            <label class="pop-up__label pop-up__select pop-up__select--closed">Выберите город
+              <input class="pop-up__input pop-up__input-select" type="text" readonly required autocomplete="off"><span
+                class="pop-up__select-marker"></span>
+              <ul class="pop-up__select-list" tabindex="-1">
+                <li class="pop-up__select-item" tabindex="0">Екатеринбург</li>
+                <li class="pop-up__select-item" tabindex="0">Санкт-Петербург</li>
+                <li class="pop-up__select-item" tabindex="0">Москва</li>
+                <li class="pop-up__select-item" tabindex="0">Казань</li>
+              </ul>
+            </label>
+            <label class="pop-up__agree" for="agree"><span class="pop-up__agree-marker"></span><input
+                class="pop-up__agree-input" type="checkbox" name="agree" id="agree" required>Я согласен на обработку
+              моих<br> персональных данных</label>
+            <button class="pop-up__button button" type="submit">Отправить<span class="button__marker"></span></button>
+          </form>
+          <button class="pop-up__cross"><span class="visually-hidden">Закрыть окно.</span></button>
+        </div>
+      </div>
       <ul class="about__list">
         <li class="about__item">
           <h3>Более 250 программ</h3>
@@ -258,7 +288,7 @@
         <a class="programs__button button">Все программы<span class="button__marker"></span></a>
       </div>
     </section>
-    <div class="grant" data-test="grant">
+    <section class="grant" data-test="grant">
       <div class="grant__wrapper">
         <div class="grant__wrapper--1">
           <h2 class="grant__title title">Как поехать</h2>
@@ -300,8 +330,8 @@
           </ul>
         </div>
       </div>
-    </div>
-    <div class="news" data-test="news">
+    </section>
+    <section class="news" data-test="news">
       <h2 class="news__title title">Новости и материалы</h2>
       <ul class="news__tabs">
         <li><button class="news__tab news__tab--active" data-target-id="1">Общее</button></li>
@@ -311,51 +341,53 @@
         <li><button class="news__tab" data-target-id="5">Путешествия</button></li>
       </ul>
       <div class="news__swiper swiper">
-        <ul class="news__list swiper-slide news__list--active" data-id="1">
-          <li class="news__item card">
-            <picture>
-              <img class="card__img" src="./img/news/news-1-mob.jpg" width="290" height="330" alt="">
-            </picture>
-            <div class="card__wrapper">
-              <span class="card__date">23/03/2023</span>
-              <h3 class="card__title">Интервью с<br>участницей
-                программы стажировки</h3>
-              <div class="card__text-wrapper">
-                <p>Саша рассказывает, как попала
-                  в программу и как прошла 6-
-                  месячная стажировка в ISOFound</p>
-                <button class="card__button small-button"></button>
+        <div class="news__swiper-wrapper swiper-wrapper">
+          <ul class="news__list swiper-slide news__list--active" data-id="1">
+            <li class="news__item card">
+              <picture>
+                <img class="card__img" src="./img/news/news-1-mob.jpg" width="290" height="330" alt="">
+              </picture>
+              <div class="card__wrapper">
+                <span class="card__date">23/03/2023</span>
+                <h3 class="card__title">Интервью с<br>участницей
+                  программы стажировки</h3>
+                <div class="card__text-wrapper">
+                  <p>Саша рассказывает, как попала
+                    в программу и как прошла 6-
+                    месячная стажировка в ISOFound</p>
+                  <button class="card__button small-button"></button>
+                </div>
               </div>
-            </div>
-          </li>
-          <li class="news__item card">a</li>
-          <li class="news__item card">a</li>
-        </ul>
-        <ul class="news__list swiper-slide" data-id="2">
-          <li class="news__item">b</li>
-          <li class="news__item">b</li>
-          <li class="news__item">b</li>
-        </ul>
-        <ul class="news__list swiper-slide" data-id="3">
-          <li class="news__item">c</li>
-          <li class="news__item">c</li>
-          <li class="news__item">c</li>
-        </ul>
-        <ul class="news__list swiper-slide" data-id="4">
-          <li class="news__item">d</li>
-          <li class="news__item">d</li>
-          <li class="news__item">d</li>
-        </ul>
-        <ul class="news__list swiper-slide" data-id="5">
-          <li class="news__item">e</li>
-          <li class="news__item">e</li>
-          <li class="news__item">e</li>
-        </ul>
-        <div class="news__toggles">
+            </li>
+            <li class="news__item card">a</li>
+            <li class="news__item card">a</li>
+          </ul>
+          <ul class="news__list swiper-slide" data-id="2">
+            <li class="news__item">b</li>
+            <li class="news__item">b</li>
+            <li class="news__item">b</li>
+          </ul>
+          <ul class="news__list swiper-slide" data-id="3">
+            <li class="news__item">c</li>
+            <li class="news__item">c</li>
+            <li class="news__item">c</li>
+          </ul>
+          <ul class="news__list swiper-slide" data-id="4">
+            <li class="news__item">d</li>
+            <li class="news__item">d</li>
+            <li class="news__item">d</li>
+          </ul>
+          <ul class="news__list swiper-slide" data-id="5">
+            <li class="news__item">e</li>
+            <li class="news__item">e</li>
+            <li class="news__item">e</li>
+          </ul>
+          <div class="news__toggles">
 
+          </div>
         </div>
       </div>
-    </div>
+    </section>
     <section class="faq" data-test="FAQ">
       <h2 class="faq__title title">Вопросы и ответы</h2>
       <ul class="faq__list">
@@ -548,7 +580,7 @@
     </section>
     <section class="form" data-test="form">
       <div class="form__container">
-        <div class="form__wrapper">
+        <!-- <div class="form__wrapper">
           <h2 class="form__title title">Напишите нам</h2>
           <p class="form__text">Оставьте ваши контакты, если у вас
             остались вопросы — мы на них ответим!</p>
@@ -570,6 +602,36 @@
             </label>
             <label class="form__agree" for="agree"><span class="form__agree-marker"></span><input
                 class="form__agree-input" type="checkbox" name="agree" id="agree" required>Я согласен на обработку
+              моих<br> персональных<br>
+              данных</label>
+            <button class="form__button button" type="submit">Отправить<span
+                class="form__button-marker button__marker"></span></button>
+          </form>
+        </div> -->
+        <div class="form__wrapper pop-up">
+          <h2 class="form__title pop-up__title title">Напишите нам</h2>
+          <p class="form__text pop-up__text">Оставьте ваши контакты, если у вас
+            остались вопросы — мы на них ответим!</p>
+          <form class="pop-up__blank" action="">
+            <label class="form__label pop-up__label">Имя<input class="form__input pop-up__input pop-up__input--name"
+                type="text" name="name" id=""></label>
+            <label class="form__label pop-up__label">Телефон<input class="form__input pop-up__input pop-up__input--tel"
+                type="tel" name="tel"></label>
+            <label class="form__label pop-up__label">Ваше сообщение<textarea
+                class="form__input pop-up__input pop-up__input--text" name="message" rows="3" id=""></textarea></label>
+            <label class="form__label pop-up__label pop-up__select pop-up__select--closed">Выберите город
+              <input class="form__input pop-up__input pop-up__input-select" type="text" readonly required
+                autocomplete="off"><span class="form__select-marker pop-up__select-marker"></span>
+              <ul class="pop-up__select-list" tabindex="-1">
+                <li class="pop-up__select-item" tabindex="0">Екатеринбург</li>
+                <li class="pop-up__select-item" tabindex="0">Санкт-Петербург</li>
+                <li class="pop-up__select-item" tabindex="0">Москва</li>
+                <li class="pop-up__select-item" tabindex="0">Казань</li>
+              </ul>
+            </label>
+            <label class="pop-up__agree" for="agree"><span
+                class="form__agree-marker pop-up__agree--marker"></span><input class="pop-up__agree-input"
+                type="checkbox" name="agree" id="agree" required>Я согласен на обработку
               моих<br> персональных<br>
               данных</label>
             <button class="form__button button" type="submit">Отправить<span
