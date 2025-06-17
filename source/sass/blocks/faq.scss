@@ -3,22 +3,27 @@
 
 .faq {
   @include m.container;
+
   display: grid;
   padding-top: 50px;
   padding-bottom: 50px;
 
   @include m.desktop {
-      padding-top: 70px;
-  padding-bottom: 6ß0px;
+    padding-top: 70px;
+    padding-bottom: 60px;
   }
 }
 
 .faq__title {
   text-align: center;
-  margin-bottom: 30px;
+  margin-bottom: 29px;
+  margin-left: -1px;
+  margin-top: 1px;
 
   @include m.tablet {
     margin-bottom: 40px;
+    margin-left: 0;
+    margin-top: 0;
   }
 
   @include m.desktop {
@@ -28,6 +33,7 @@
 
 .faq__list {
   @include m.list-reset;
+
   display: grid;
   gap: 10px;
 
@@ -49,6 +55,8 @@
 
   @include m.tablet {
     padding: 30px;
+    border-radius: 16px;
+    align-items: start;
   }
 
   @include m.desktop {
@@ -73,7 +81,7 @@
   content: "";
   width: 20px;
   height: 20px;
-  mask-image: url(/__spritemap#sprite-minus-view);
+  mask-image: url("/__spritemap#sprite-minus-view");
   mask-position: center;
   mask-repeat: no-repeat;
   background-color: v.$mariner;
@@ -89,6 +97,7 @@
   @include m.tablet {
     font-size: 22px;
     line-height: 26px;
+    align-self: center;
   }
 
   @include m.desktop {
@@ -106,6 +115,7 @@
     width: 90%;
   }
 }
+
 .faq__text {
   display: grid;
   gap: 10px;
@@ -123,11 +133,10 @@
     line-height: 20px;
   }
 
-    @include m.desktop {
+  @include m.desktop {
     font-size: 16px;
     line-height: 26px;
   }
-
 }
 
 .faq__button {
@@ -149,7 +158,7 @@
   width: 20px;
   height: 20px;
   background-color: v.$nero;
-  mask-image: url(/__spritemap#sprite-plus-view);
+  mask-image: url("/__spritemap#sprite-plus-view");
   mask-position: center;
   mask-repeat: no-repeat;
 }

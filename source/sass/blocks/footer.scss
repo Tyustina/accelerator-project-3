@@ -3,6 +3,7 @@
 
 .footer {
   @include m.container;
+
   display: grid;
   padding-top: 40px;
   padding-bottom: 40px;
@@ -15,6 +16,8 @@
   @include m.desktop {
     grid-template-columns: 3fr 1fr;
     grid-template-rows: auto;
+    padding-top: 60px;
+    padding-bottom: 42px;
   }
 }
 
@@ -58,7 +61,7 @@
   padding: 0;
 
   @include m.tablet {
-    gap: 15px;
+    gap: 13px;
   }
 
   @include m.desktop {
@@ -83,18 +86,20 @@
 
   @include m.desktop {
     line-height: 26px;
+    letter-spacing: normal;
   }
 }
 
 .footer__privacy {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 13px;
   justify-items: center;
+  align-items: center;
   margin-bottom: 15px;
 
   @include m.tablet {
-    justify-items: flex-start;
+    align-items: flex-start;
     margin-bottom: 0;
     grid-column: 1/2;
   }
@@ -109,9 +114,11 @@
 }
 
 .footer__privacy-link {
+  position: relative;
   font-size: 12px;
   line-height: 14px;
   color: v.$tundora;
+  text-decoration: none;
 
   @include m.tablet {
     line-height: 12px;
@@ -121,6 +128,17 @@
     font-size: 14px;
     line-height: 18px;
   }
+}
+
+.footer__privacy-link::after {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  bottom: -3px;
+  left: 0;
+  background-color: v.$tundora;
 }
 
 .footer__privacy-text {

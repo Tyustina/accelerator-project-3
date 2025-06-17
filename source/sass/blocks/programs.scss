@@ -2,27 +2,37 @@
 @use "../global/mixin.scss" as m;
 
 .programs {
-
   padding-top: 50px;
   padding-bottom: 50px;
 
   @include m.desktop {
-    padding-top: 62px;
+    @include m.container;
+
+    padding-top: 65px;
   }
 }
 
 .programs .swiper {
-  @include m.container;
+  width: 320px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto;
   position: relative;
   padding-top: 5px;
 
   @include m.tablet {
+    width: 768px;
+    padding-left: 45px;
+    padding-right: 45px;
     padding-top: 3px;
     padding-bottom: 10px;
-      overflow: visible;
+    overflow: hidden;
   }
 
   @include m.desktop {
+    width: unset;
+    padding: 0;
+    margin: 0;
     padding-bottom: 20px;
   }
 }
@@ -30,7 +40,6 @@
 .programs .swiper-slide {
   display: flex;
   align-items: flex-end;
-  overflow: hidden;
 }
 
 .programs .swiper-wrapper {
@@ -38,7 +47,7 @@
   margin: 0;
 
   @include m.desktop {
-    overflow: hidden;
+    overflow: visible;
   }
 }
 
@@ -91,6 +100,7 @@
   display: flex;
   flex-direction: column;
   z-index: 5;
+
   --nb-r: 12px;
   --nb-w: 100px;
   --nb-h: 18px;
@@ -103,6 +113,7 @@
   @include m.desktop {
     width: 91%;
     bottom: 7px;
+
     --nb-w: 102px;
     --nb-h: 17px;
   }
@@ -151,6 +162,7 @@
   padding-left: 31px;
   margin-top: 30px;
   gap: 30px;
+  text-decoration: none;
 
   @include m.tablet {
     position: absolute;
@@ -161,7 +173,8 @@
   }
 
   @include m.desktop {
-    right: 100px;
+    right: 0;
+    top: -33px;
   }
 }
 
@@ -182,7 +195,7 @@
   grid-template-columns: 1fr max-content;
   gap: 10px;
   align-items: center;
-  padding: 12px 18px 15px 18px;
+  padding: 12px 18px 15px;
   background-color: v.$nero;
   border-bottom-left-radius: 12px;
   border-bottom-right-radius: 12px;
@@ -208,7 +221,7 @@
 
   @include m.desktop {
     bottom: 10px;
-    right: 100px;
+    right: 0;
   }
 }
 
@@ -227,7 +240,6 @@
   @include m.desktop {
     width: 1136px;
   }
-
 }
 
 .programs__scrollbar .swiper-scrollbar-drag {

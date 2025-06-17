@@ -20,6 +20,7 @@
 
 .grant__wrapper {
   @include m.container;
+
   display: grid;
   gap: 12px;
 
@@ -64,13 +65,12 @@
   width: 290px;
   height: 200px;
   border-radius: 16px;
-  background-image: image-set(url("../../img/grant-img.png") 1x type("image/png"),
-      url("../../img/grant-img@2x.png") 2x type("image/png"));
   margin-top: 30px;
   margin-bottom: 30px;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  margin-left: auto;
+  margin-right: auto;
+  object-position: center;
+  object-fit: cover;
 
   @include m.tablet {
     width: 678px;
@@ -111,6 +111,7 @@
 
 .grant__list {
   @include m.list-reset;
+
   display: grid;
   gap: 15px;
   padding-left: 15px;
@@ -126,7 +127,6 @@
     display: flex;
     flex-direction: column;
     gap: 23px;
-
   }
 }
 
@@ -145,7 +145,6 @@
   }
 
   @include m.desktop {
-
     line-height: 26px;
     padding: 30px 26px;
   }
@@ -175,6 +174,7 @@
     width: 40px;
     height: 40px;
   }
+
   @include m.desktop {
     font-size: 22px;
     width: 42px;

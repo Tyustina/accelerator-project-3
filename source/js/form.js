@@ -6,7 +6,7 @@ forms.forEach((form) => {
   const nameInput = form.querySelector('.pop-up__input--name');
   const telInput = form.querySelector('.pop-up__input--tel');
   const messageInput = form.querySelector('.pop-up__input--text');
-  const selectInput = form.querySelector('.pop-up__input-select');
+  const selectInput = form.querySelector('.pop-up__select');
   const agreeCheckbox = form.querySelector('.pop-up__agree-input');
 
   nameInput.addEventListener('input', () => {
@@ -56,7 +56,6 @@ forms.forEach((form) => {
 
     const formData = new FormData(form);
 
-    // try {
     const response = await fetch(form.action, {
       method: form.method,
       body: formData,
@@ -67,14 +66,7 @@ forms.forEach((form) => {
       closeModal();
       hideOverlay();
       showMessage('Сообщение успешно отправлено!', true);
-      // console.log('Форма отправлена');
     }
-    //     } else {
-    //       showMessage('Произошла ошибка при отправке формы. Попробуйте позже.', false);
-    //     }
-    //   } catch (error) {
-    //     showMessage('Произошла ошибка сети. Попробуйте позже.', false);
-    //   }
   });
 });
 

@@ -1,12 +1,14 @@
 @use "../global/variables.scss" as v;
 @use "../global/mixin.scss" as m;
+
 .news {
   overflow: hidden;
 }
+
 .news__tabs {
   @include m.list-reset;
-  display: flex;
 
+  display: flex;
 }
 
 .news__tab {
@@ -29,6 +31,7 @@
 
 .swiper .news__list {
   @include m.list-reset;
+
   display: none;
 }
 

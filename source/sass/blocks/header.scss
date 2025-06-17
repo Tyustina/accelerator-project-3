@@ -3,6 +3,7 @@
 
 .header {
   @include m.container;
+
   position: absolute;
   left: calc(50% - 160px);
   display: grid;

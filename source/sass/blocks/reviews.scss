@@ -18,13 +18,13 @@
 
 .reviews .swiper {
   @include m.container;
+
   position: relative;
   display: grid;
 
   @include m.tablet {
     padding-bottom: 10px;
   }
-
 }
 
 .reviews__title {
@@ -44,7 +44,6 @@
   display: flex;
   padding-left: 0;
   margin: 0;
-
 }
 
 .reviews .swiper-slide {
@@ -53,7 +52,7 @@
   gap: 25px;
   border: 2px solid v.$mariner;
   border-radius: 16px;
-padding: 29px 16px 30px 15px;
+  padding: 29px 16px 30px 15px;
 
   @include m.tablet {
     gap: 30px;
@@ -97,7 +96,6 @@ padding: 29px 16px 30px 15px;
   @include m.desktop {
     width: 1136px;
   }
-
 }
 
 .reviews__scrollbar .swiper-scrollbar-drag {
@@ -210,7 +208,6 @@ padding: 29px 16px 30px 15px;
     grid-column: 1/-1;
     gap: 25px;
   }
-
 }
 
 .reviews__text .reviews__quote {

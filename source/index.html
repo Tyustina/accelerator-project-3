@@ -5,51 +5,51 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Internship</title>
+  <link rel="preload" href="fonts/manrope-light.woff2" as="font" type="font/woff2">
+  <link rel="preload" href="fonts/manrope-medium.woff2" as="font" type="font/woff2">
+  <link rel="preload" href="fonts/manrope-regular.woff2" as="font" type="font/woff2">
+  <link rel="icon" href="favicon.ico">
+  <link rel="icon" type="image/png" href="public/favicon-32x32.png">
   <link rel="stylesheet" href="sass/style.scss">
 </head>
 
 <body class="page-body">
   <div class="overlay"></div>
-  <!-- пример использования спрайта -->
-  <!-- <img src="/__spritemap#sprite-logo-view" alt="Это спрайт">
-  <svg>
-    <use href="/__spritemap#sprite-user"></use>
-  </svg> -->
   <main>
     <h1 class="visually-hidden">Обучение за рубежом.</h1>
-    <section class="header-hero-wrapper" data-test="hero">
+    <div class="header-hero-wrapper" data-test="hero">
       <header class="header">
         <picture>
-          <source type="image/webp" srcset="./img/logo.webp 1x, ./img/logo@2x.webp" width="52" height="52">
-          <img class="header__logo" src="./img/logo.png" srcset="./img/logo@2x.png" width="52" height="52"
-            alt="Логотип.">
+          <img class="header__logo" src="./img/logo.svg" width="52" height="52" alt="Логотип.">
         </picture>
         <nav class="nav nav--closed">
-          <button class="nav__button button">Меню<span class="nav__button-marker button__marker"></span></button>
+          <button class="nav__button button" type="button">Меню<span
+              class="nav__button-marker button__marker"></span></button>
           <ul class="nav__list">
-            <li class="nav__item"><a>О проекте</a></li>
+            <li class="nav__item"><a class="nav__link" href="#about">О проекте</a></li>
             <li class="nav__item drop-down-list drop-down-list--opened">
-              <a class="nav__link">Программы<span class="drop-down-marker"></span></a>
+              <a class="nav__link" href="#">Программы<span class="drop-down-marker"></span></a>
               <ul class="nav__sublist drop-down-items">
-                <li class="nav__subitem"><a>Стажировки</a></li>
-                <li class="nav__subitem"><a>Волонтерство</a></li>
-                <li class="nav__subitem"><a>Учеба</a></li>
-                <li class="nav__subitem"><a>Религия</a></li>
+                <li class="nav__subitem"><a class="nav__subitem-link" href="#programs-intership">Стажировки</a></li>
+                <li class="nav__subitem"><a class="nav__subitem-link" href="#programs-volunteering">Волонтерство</a>
+                </li>
+                <li class="nav__subitem"><a class="nav__subitem-link" href="#programs-study">Учеба</a></li>
+                <li class="nav__subitem"><a class="nav__subitem-link" href="#programs-religion">Религия</a></li>
               </ul>
             </li>
-            <li class="nav__item"><a>Как поехать</a></li>
-            <li class="nav__item"><a>Отзывы</a></li>
+            <li class="nav__item"><a class="nav__link" href="#grant">Как поехать</a></li>
+            <li class="nav__item"><a class="nav__link" href="#reviews">Отзывы</a></li>
             <li class="nav__item drop-down-list drop-down-list--closed">
-              <a class="nav__link">Новости<span class="drop-down-marker"></span></a>
+              <a class="nav__link" href="#">Новости<span class="drop-down-marker"></span></a>
               <ul class="nav__sublist drop-down-items">
-                <li class="nav__subitem"><a>Общее</a></li>
-                <li class="nav__subitem"><a>Волонтерство</a></li>
-                <li class="nav__subitem"><a>Стажировки</a></li>
-                <li class="nav__subitem"><a>Карьера</a></li>
-                <li class="nav__subitem"><a>Путешествия</a></li>
+                <li class="nav__subitem"><a href="#">Общее</a></li>
+                <li class="nav__subitem"><a href="#">Волонтерство</a></li>
+                <li class="nav__subitem"><a href="#">Стажировки</a></li>
+                <li class="nav__subitem"><a href="#">Карьера</a></li>
+                <li class="nav__subitem"><a href="#">Путешествия</a></li>
               </ul>
             </li>
-            <li class="nav__item"><a>Контакты</a></li>
+            <li class="nav__item"><a class="nav__link" href="#contacts">Контакты</a></li>
           </ul>
         </nav>
       </header>
@@ -70,7 +70,7 @@
                 <source media="(min-width: 768px)" type="image/jpg"
                   srcset="./img/hero/hero-1-tab.jpg, ./img/hero/hero-1-tab@2x.jpg 2x" width="768" height="1024">
                 <img class="hero__img" src="./img/hero/hero-1.jpg" srcset="./img/hero/hero-1@2x.jpg" width="320"
-                  height="568" alt="">
+                  height="568" alt="Студентка обучающаяся за рубежом.">
               </picture>
               <div class="hero__wrapper">
                 <div class="hero__pagination swiper-pagination"></div>
@@ -84,11 +84,11 @@
                     в&nbsp;разных городах, ощущая
                     настоящий студенческий<br>стиль жизни!</p>
                   <div class="hero__button-wrapper">
-                    <a class="hero__button button">Подробнее<span class="hero__button-marker button__marker"></span></a>
+                    <a class="hero__button button" href="#">Подробнее<span
+                        class="hero__button-marker button__marker"></span></a>
                   </div>
                 </div>
               </div>
-            </li>
             </li>
             <li class="hero__slide swiper-slide">
               <picture>
@@ -96,14 +96,14 @@
                   srcset="./img/hero/hero-2-desk.webp, ./img/hero/hero-2-desk@2x.webp 2x" width="1440" height="800">
                 <source media="(min-width: 768px)" type="image/webp"
                   srcset="./img/hero/hero-2-tab.webp, ./img/hero/hero-2-tab@2x.webp 2x" width="768" height="1024">
-                <source type="image/webp" src="./img/hero/hero-2.webp 1x, ./img/hero/hero-2@2x.webp 2x" width="320"
+                <source type="image/webp" srcset="./img/hero/hero-2.webp 1x, ./img/hero/hero-2@2x.webp 2x" width="320"
                   height="568">
                 <source media="(min-width: 1440px)" type="image/jpg"
                   srcset="./img/hero/hero-2-desk.jpg, ./img/hero/hero-2-desk@2x.jpg 2x" width="1440" height="800">
                 <source media="(min-width: 768px)" type="image/jpg"
                   srcset="./img/hero/hero-2-tab.jpg, ./img/hero/hero-2-tab@2x.jpg 2x" width="768" height="1024">
                 <img class="hero__img" src="./img/hero/hero-2.jpg" srcset="./img/hero/hero-2@2x.jpg" width="320"
-                  height="568" alt="">
+                  height="568" alt="Волонтеры.">
               </picture>
               <div class="hero__wrapper">
                 <div class="hero__pagination swiper-pagination"></div>
@@ -114,9 +114,10 @@
                   <p>Возможности для преподавания, органического сельского хозяйства, устойчивого образа жизни и другое.
                   </p>
                   <div class="hero__button-wrapper">
-                    <a class="hero__button button">Подробнее<span class="button__marker"></span></a>
+                    <a class="hero__button button" href="#">Подробнее<span class="button__marker"></span></a>
                   </div>
                 </div>
+              </div>
             </li>
             <li class="hero__slide swiper-slide">
               <picture>
@@ -132,7 +133,7 @@
                 <source media="(min-width: 768px)" type="image/jpg"
                   srcset="./img/hero/hero-3-tab.jpg, ./img/hero/hero-3-tab@2x.jpg 2x" width="768" height="1024">
                 <img class="hero__img" src="./img/hero/hero-3.jpg" srcset="./img/hero/hero-3@2x.jpg" width="320"
-                  height="568" alt="">
+                  height="568" alt="Стажировка в компании.">
               </picture>
               <div class="hero__wrapper">
                 <div class="hero__pagination swiper-pagination"></div>
@@ -143,15 +144,16 @@
                 <div class="hero__text-button-wrapper nebo">
                   <p>Получите незаменимый опыт работы в ведущих мировых компаниях и государственных организациях.</p>
                   <div class="hero__button-wrapper">
-                    <a class="hero__button button">Подробнее<span class="button__marker"></span></a>
+                    <a class="hero__button button" href="#">Подробнее<span class="button__marker"></span></a>
                   </div>
                 </div>
+              </div>
             </li>
           </ul>
         </div>
       </section>
-    </section>
-    <section class="about" data-test="about">
+    </div>
+    <section class="about" data-test="about" id="about">
       <div class="about__wrapper">
         <h2 class="about__title title">О проекте «Стажировка»</h2>
         <p>«Стажировка» — совместный проект
@@ -169,7 +171,7 @@
           способностью инициировать значимые
           изменения.</p>
       </div>
-      <a class="about__button button">Подробнее о проекте<span class="button__marker"></span></a>
+      <a class="about__button button" href="#">Подробнее о проекте<span class="button__marker"></span></a>
       <div class="about__pop-up pop-up pop-up--closed">
         <div class="pop-up__wrapper">
           <h2 class="pop-up__title title">Напишите нам</h2>
@@ -177,28 +179,36 @@
             остались вопросы — мы на них ответим!</p>
           <form class="pop-up__blank" action="https://echo.htmlacademy.ru/." method="post">
             <label class="pop-up__label">Имя<input class="pop-up__input pop-up__input--name" type="text" name="name"
-                pattern="^[а-яА-Я\s]+$" title="Поле должно содержать только буквы и пробелы" required></label>
+                pattern="^[а-яА-Я\s]+$" title="Поле должно содержать только буквы и пробелы" required>
+            </label>
             <label class="pop-up__label">Телефон<input class="pop-up__input pop-up__input--tel" type="tel" name="tel"
-                pattern="^[+7][0-9]{11}$" title="Пожалуйста, введите номер телефона в формате +7XXXXXXXXXX"
-                required></label>
-            <label class="pop-up__label">Ваше сообщение<textarea class="pop-up__input pop-up__input--text"
-                name="message" rows="3" minlength="3" required></textarea></label>
-            <label class="pop-up__label pop-up__select pop-up__select--closed">Выберите город
-              <input class="pop-up__input pop-up__input-select" type="text" readonly required autocomplete="off"><span
-                class="pop-up__select-marker"></span>
+                pattern="^[+7][0-9]{11}$" title="Пожалуйста, введите номер телефона в формате +7XXXXXXXXXX" required>
+            </label>
+            <div class="pop-up__input-wrapper">
+              <label class="pop-up__label" for="textarea">Ваше сообщение</label>
+              <textarea class="pop-up__input pop-up__input--text" name="message" id="textarea" rows="3" minlength="3"
+                required></textarea>
+            </div>
+            <div class="pop-up__input-wrapper select-wrapper">
+              <label class="pop-up__label" for="select">Выберите город</label>
+              <input class="pop-up__input pop-up__select pop-up__select--closed" type="text" name="text" id="select"
+                readonly required autocomplete="off"><span class="pop-up__select-marker"></span>
               <ul class="pop-up__select-list" tabindex="-1">
                 <li class="pop-up__select-item" tabindex="0">Екатеринбург</li>
                 <li class="pop-up__select-item" tabindex="0">Санкт-Петербург</li>
                 <li class="pop-up__select-item" tabindex="0">Москва</li>
                 <li class="pop-up__select-item" tabindex="0">Казань</li>
               </ul>
-            </label>
-            <label class="pop-up__agree" for="agree"><span class="pop-up__agree-marker"></span><input
-                class="pop-up__agree-input" type="checkbox" name="agree" id="agree" required>Я согласен на обработку
-              моих<br> персональных данных</label>
+            </div>
+            <div class="pop-up__agree-wrapper">
+              <label class="pop-up__agree" for="agree">Я согласен на обработку
+                моих <br>персональных <br>данных</label>
+              <input class="pop-up__agree-input" type="checkbox" name="agree" id="agree"><span
+                class="pop-up__agree-marker"></span>
+            </div>
             <button class="pop-up__button button" type="submit">Отправить<span class="button__marker"></span></button>
           </form>
-          <button class="pop-up__cross"><span class="visually-hidden">Закрыть окно.</span></button>
+          <button class="pop-up__cross" type="button"><span class="visually-hidden">Закрыть окно.</span></button>
         </div>
       </div>
       <ul class="about__list">
@@ -225,19 +235,19 @@
         </li>
       </ul>
     </section>
-    <section class="programs" data-test="programs">
+    <section class="programs" data-test="programs" id="programs">
       <div class="programs__slider swiper">
         <h2 class="programs__title title">Программы</h2>
         <div class="programs__toggles toggles">
-          <button class="programs__toggle toggle programs__toggle--prev"><span
+          <button class="programs__toggle toggle programs__toggle--prev" type="button"><span
               class="toggle__marker toggle__marker--prev"><span class="visually-hidden">Предыдущий
                 слайд.</span></span></button>
-          <button class="programs__toggle toggle programs__toggle--next"><span
+          <button class="programs__toggle toggle programs__toggle--next" type="button"><span
               class="toggle__marker toggle__marker--next"><span class="visually-hidden">Следующий
                 слайд.</span></span></button>
         </div>
         <ul class="programs__list swiper-wrapper">
-          <li class="programs__item swiper-slide">
+          <li class="programs__item swiper-slide" id="programs-intership">
             <picture>
               <source media="(min-width: 1440px)" type="image/webp"
                 srcset="./img/programs/programs-1-desk.webp, ./img/programs/programs-1-desk@2x.webp 2x" width="392"
@@ -245,8 +255,8 @@
               <source media="(min-width: 768px)" type="image/webp"
                 srcset="./img/programs/programs-1-tab.webp, ./img/programs/programs-1-tab@2x.webp 2x" width="324"
                 height="420">
-              <source srcset="./img/programs/programs-1.webp 1x, ./img/programs/programs-1@2x.webp 2x" width="290"
-                height="400">
+              <source type="image/webp" srcset="./img/programs/programs-1.webp 1x, ./img/programs/programs-1@2x.webp 2x"
+                width="290" height="400">
 
               <source media="(min-width: 1440px)" type="image/jpg"
                 srcset="./img/programs/programs-1-desk.jpg, ./img/programs/programs-1-desk@2x.jpg 2x" width="392"
@@ -255,7 +265,7 @@
                 srcset="./img/programs/programs-1-tab.jpg, ./img/programs/programs-1-tab@2x.jpg 2x" width="324"
                 height="420">
               <img class="programs__img" src="./img/programs/programs-1.jpg" srcset="./img/programs/programs-1@2x.jpg"
-                width="290" height="400" alt="">
+                width="290" height="400" alt="Стажировка в компании.">
             </picture>
             <div class="programs__wrapper nebo nebo--tr">
               <div class="programs__title-wrapper">
@@ -268,7 +278,7 @@
               </div>
             </div>
           </li>
-          <li class="programs__item swiper-slide">
+          <li class="programs__item swiper-slide" id="programs-volunteering">
             <picture>
               <source media="(min-width: 1440px)" type="image/webp"
                 srcset="./img/programs/programs-2-desk.webp 1x,  ./img/programs/programs-2-desk@2x.webp 2x" width="392"
@@ -276,8 +286,8 @@
               <source media="(min-width: 768px)" type="image/webp"
                 srcset="./img/programs/programs-2-tab.webp 1x, ./img/programs/programs-2-tab@2x.webp 2x" width="324"
                 height="420">
-              <source src="./img/programs/programs-2.webp" srcset="./img/programs/programs-2@2x.webp" width="290"
-                height="400">
+              <source type="image/webp" srcset="./img/programs/programs-2.webp 1x, ./img/programs/programs-2@2x.webp 2x"
+                width="290" height="400">
 
               <source media="(min-width: 1440px)" type="image/jpg"
                 srcset="./img/programs/programs-2-desk.jpg, ./img/programs/programs-2-desk@2x.jpg 2x" width="392"
@@ -286,7 +296,7 @@
                 srcset="./img/programs/programs-2-tab.jpg, ./img/programs/programs-2-tab@2x.jpg 2x" width="324"
                 height="420">
               <img class="programs__img" src="./img/programs/programs-2.jpg" srcset="./img/programs/programs-2@2x.jpg"
-                width="290" height="400" alt="">
+                width="290" height="400" alt="Волонтер.">
             </picture>
             <div class="programs__wrapper nebo nebo--tr">
               <div class="programs__title-wrapper">
@@ -299,7 +309,7 @@
               </div>
             </div>
           </li>
-          <li class="programs__item swiper-slide">
+          <li class="programs__item swiper-slide" id="programs-study">
             <picture>
               <source media="(min-width: 1440px)" type="image/webp"
                 srcset="./img/programs/programs-3-desk.webp 1x, ./img/programs/programs-3-desk@2x.webp 2x" width="392"
@@ -307,17 +317,17 @@
               <source media="(min-width: 768px)" type="image/webp"
                 srcset="./img/programs/programs-3-tab.webp 1x, ./img/programs/programs-3-tab@2x.webp 2x" width="324"
                 height="420">
-                <source srcset="./img/programs/programs-3.webp 1x, ./img/programs/programs-3@2x.webp 2x" width="290"
-                height="400">
+              <source type="image/webp" srcset="./img/programs/programs-3.webp 1x, ./img/programs/programs-3@2x.webp 2x"
+                width="290" height="400">
 
-                <source media="(min-width: 1440px)" type="image/jpg"
-                  srcset="./img/programs/programs-3-desk.jpg, ./img/programs/programs-3-desk@2x.jpg 2x" width="392"
-                  height="420">
-                <source media="(min-width: 768px)" type="image/jpg"
-                  srcset="./img/programs/programs-3-tab.jpg, ./img/programs/programs-3-tab@2x.jpg 2x" width="324"
-                  height="420">
-                <img class="programs__img" src="./img/programs/programs-3.jpg" srcset="./img/programs/programs-3@2x.jpg"
-                  width="290" height="400" alt="">
+              <source media="(min-width: 1440px)" type="image/jpg"
+                srcset="./img/programs/programs-3-desk.jpg, ./img/programs/programs-3-desk@2x.jpg 2x" width="392"
+                height="420">
+              <source media="(min-width: 768px)" type="image/jpg"
+                srcset="./img/programs/programs-3-tab.jpg, ./img/programs/programs-3-tab@2x.jpg 2x" width="324"
+                height="420">
+              <img class="programs__img" src="./img/programs/programs-3.jpg" srcset="./img/programs/programs-3@2x.jpg"
+                width="290" height="400" alt="Студент.">
             </picture>
 
             <div class="programs__wrapper nebo nebo--tr">
@@ -331,7 +341,7 @@
               </div>
             </div>
           </li>
-          <li class="programs__item swiper-slide">
+          <li class="programs__item swiper-slide" id="programs-religion">
             <picture>
               <source media="(min-width: 1440px)" type="image/webp"
                 srcset="./img/programs/programs-1-desk.webp, ./img/programs/programs-1-desk@2x.webp 2x" width="392"
@@ -339,8 +349,8 @@
               <source media="(min-width: 768px)" type="image/webp"
                 srcset="./img/programs/programs-1-tab.webp, ./img/programs/programs-1-tab@2x.webp 2x" width="324"
                 height="420">
-              <source srcset="./img/programs/programs-1.webp 1x, ./img/programs/programs-1@2x.webp 2x" width="290"
-                height="400">
+              <source type="image/webp" srcset="./img/programs/programs-1.webp 1x, ./img/programs/programs-1@2x.webp 2x"
+                width="290" height="400">
 
               <source media="(min-width: 1440px)" type="image/jpg"
                 srcset="./img/programs/programs-1-desk.jpg, ./img/programs/programs-1-desk@2x.jpg 2x" width="392"
@@ -349,7 +359,7 @@
                 srcset="./img/programs/programs-1-tab.jpg, ./img/programs/programs-1-tab@2x.jpg 2x" width="324"
                 height="420">
               <img class="programs__img" src="./img/programs/programs-1.jpg" srcset="./img/programs/programs-1@2x.jpg"
-                width="290" height="400" alt="">
+                width="290" height="400" alt="Стажировка в компании.">
             </picture>
             <div class="programs__wrapper nebo nebo--tr">
               <div class="programs__title-wrapper">
@@ -365,12 +375,12 @@
         </ul>
         <div class="programs__scrollbar swiper-scrollbar">
         </div>
-        <a class="programs__button button">Все программы<span class="button__marker"></span></a>
+        <a class="programs__button button" href="#">Все программы<span class="button__marker"></span></a>
       </div>
     </section>
-    <section class="grant" data-test="grant">
+    <section class="grant" data-test="grant" id="grant">
       <div class="grant__wrapper">
-        <div class="grant__wrapper--1">
+        <div class="grant__wrapper-1">
           <h2 class="grant__title title">Как поехать</h2>
           <div class="grant__text">
             <p>Свяжитесь с координатором, чтобы узнать
@@ -379,9 +389,14 @@
               программах и городах, в которых можете
               пройти программу.</p>
           </div>
-          <div class="grant__img"></div>
+          <picture>
+            <source type="image/webp" srcset="./img/grant/grant-img.webp 1x, ./img/grant/grant-img@2x.webp 2x"
+              width="290" height="200">
+            <img class="grant__img" src="./img/grant/grant-img.png" srcset="./grant/grant-img@2x.png" width="290"
+              height="200" alt="Как поехать на обучение.">
+          </picture>
         </div>
-        <div class="grant__wrapper--2">
+        <div class="grant__wrapper-2">
           <h3 class="grant__heading">Чтобы получить грант
             на обучение, вам нужно:</h3>
           <ul class="grant__list">
@@ -411,14 +426,14 @@
         </div>
       </div>
     </section>
-    <section class="news" data-test="news">
+    <section class="news" data-test="news" id="news">
       <h2 class="news__title title">Новости и материалы</h2>
       <ul class="news__tabs">
-        <li><button class="news__tab news__tab--active" data-target-id="1">Общее</button></li>
-        <li><button class="news__tab" data-target-id="2">Волонтерство</button></li>
-        <li><button class="news__tab" data-target-id="3">Стажировки</button></li>
-        <li><button class="news__tab" data-target-id="4">Карьера</button></li>
-        <li><button class="news__tab" data-target-id="5">Путешествия</button></li>
+        <li><button class="news__tab news__tab--active" type="button" data-target-id="1">Общее</button></li>
+        <li><button class="news__tab" type="button" data-target-id="2">Волонтерство</button></li>
+        <li><button class="news__tab" type="button" data-target-id="3">Стажировки</button></li>
+        <li><button class="news__tab" type="button" data-target-id="4">Карьера</button></li>
+        <li><button class="news__tab" type="button" data-target-id="5">Путешествия</button></li>
       </ul>
       <div class="news__swiper swiper">
         <div class="news__swiper-wrapper swiper-wrapper">
@@ -435,7 +450,8 @@
                   <p>Саша рассказывает, как попала
                     в программу и как прошла 6-
                     месячная стажировка в ISOFound</p>
-                  <button class="card__button small-button"></button>
+                  <button class="card__button small-button" type="button"><span
+                      class="visually-hidden">Перейти.</span></button>
                 </div>
               </div>
             </li>
@@ -474,7 +490,8 @@
         <li class="faq__item">
           <h3 class="faq__heading">Кто организатор? Какие
             сроки у программы?</h3>
-          <button class="faq__button"></button>
+          <button class="faq__button" type="button"><span class="visually-hidden">Открыть или закрыть
+              ответ.</span></button>
           <div class="faq__text">
             <p>Полная стоимость определяется
               организаторами в зависимости
@@ -489,7 +506,8 @@
         <li class="faq__item">
           <h3 class="faq__heading">Что такое грант
             на обучение?</h3>
-          <button class="faq__button"></button>
+          <button class="faq__button" type="button"><span class="visually-hidden">Открыть или закрыть
+              ответ.</span></button>
           <div class="faq__text">
             <p>Полная стоимость определяется
               организаторами в зависимости
@@ -504,7 +522,8 @@
         <li class="faq__item faq__item--opened">
           <h3 class="faq__heading">Как определяется
             стоимость программы?</h3>
-          <button class="faq__button"></button>
+          <button class="faq__button" type="button"><span class="visually-hidden">Открыть или закрыть
+              ответ.</span></button>
           <div class="faq__text">
             <p>Полная стоимость определяется
               организаторами в зависимости
@@ -519,7 +538,8 @@
         <li class="faq__item">
           <h3 class="faq__heading">Признаётся ли учёба
             в рамках проекта для дальнейшего обучения?</h3>
-          <button class="faq__button"></button>
+          <button class="faq__button" type="button"><span class="visually-hidden">Открыть или закрыть
+              ответ.</span></button>
           <div class="faq__text">
             <p>Полная стоимость определяется
               организаторами в зависимости
@@ -536,7 +556,8 @@
             процесс регистрации
             на программу
             «Стажировка»?</h3>
-          <button class="faq__button"></button>
+          <button class="faq__button" type="button"><span class="visually-hidden">Открыть или закрыть
+              ответ.</span></button>
           <div class="faq__text">
             <p>Полная стоимость определяется
               организаторами в зависимости
@@ -550,14 +571,14 @@
         </li>
       </ul>
     </section>
-    <section class="reviews" data-test="reviews">
+    <section class="reviews" data-test="reviews" id="reviews">
       <div class="reviews__slider swiper">
         <h2 class="reviews__title title">Отзывы</h2>
         <div class="reviews__toggles toggles">
-          <button class="reviews__toggle toggle reviews__toggle--prev"><span
+          <button class="reviews__toggle toggle reviews__toggle--prev" type="button"><span
               class="toggle__marker toggle__marker--prev"><span class="visually-hidden">Предыдущий
                 слайд.</span></span></button>
-          <button class="reviews__toggle toggle reviews__toggle--next"><span
+          <button class="reviews__toggle toggle reviews__toggle--next" type="button"><span
               class="toggle__marker toggle__marker--next"><span class="visually-hidden">Следующий
                 слайд.</span></span></button>
         </div>
@@ -566,10 +587,10 @@
             <div class="reviews__wrapper">
               <div class="reviews__user">
                 <picture>
-                  <source type="image/webp" srcset="./img/reviews/avatar-1.webp 1x, ./img/reviews/avatar-1@2x.webp"
+                  <source type="image/webp" srcset="./img/reviews/avatar-1.webp 1x, ./img/reviews/avatar-1@2x.webp 2x"
                     width="60" height="60">
                   <img class="reviews__img" src="./img/reviews/avatar-1.jpg" srcset="./img/reviews/avatar-1@2x.jpg"
-                    width="60" height="60" alt="">
+                    width="60" height="60" alt="Лола Алекс.">
                 </picture>
                 <p class="reviews__name">Лола<br>Алекс</p>
               </div>
@@ -603,7 +624,7 @@
                   <source srcset="./img/reviews/avatar-2.webp 1x, ./img/reviews/avatar-2@2x.webp 2x" type="image/webp"
                     width="60" height="60">
                   <img class="reviews__img" src="./img/reviews/avatar-2.jpg" srcset="./img/reviews/avatar-2@2x.jpg"
-                    width="60" height="60" alt="">
+                    width="60" height="60" alt="Давид Иванов.">
                 </picture>
                 <p class="reviews__name">Давид<br>Иванов</p>
               </div>
@@ -631,10 +652,10 @@
             <div class="reviews__wrapper">
               <div class="reviews__user">
                 <picture>
-                  <source type="image/webp" srcset="./img/reviews/avatar-1.webp 1x, ./img/reviews/avatar-1@2x.webp"
+                  <source type="image/webp" srcset="./img/reviews/avatar-1.webp 1x, ./img/reviews/avatar-1@2x.webp 2x"
                     width="60" height="60">
                   <img class="reviews__img" src="./img/reviews/avatar-1.jpg" srcset="./img/reviews/avatar-1@2x.jpg"
-                    width="60" height="60" alt="">
+                    width="60" height="60" alt="Лола Алекс">
                 </picture>
                 <p class="reviews__name">Лола<br>Алекс</p>
               </div>
@@ -668,7 +689,7 @@
                   <source srcset="./img/reviews/avatar-2.webp 1x, ./img/reviews/avatar-2@2x.webp 2x" type="image/webp"
                     width="60" height="60">
                   <img class="reviews__img" src="./img/reviews/avatar-2.jpg" srcset="./img/reviews/avatar-2@2x.jpg"
-                    width="60" height="60" alt="">
+                    width="60" height="60" alt="Давид Иванов.">
                 </picture>
                 <p class="reviews__name">Давид<br>Иванов</p>
               </div>
@@ -697,7 +718,7 @@
         </div>
       </div>
     </section>
-    <section class="contacts" data-test="contacts">
+    <section class="contacts" data-test="contacts" id="contacts">
       <div class="contacts__container">
         <div class="contacts__wrapper">
           <h2 class="contacts__title title">Контакты</h2>
@@ -723,78 +744,56 @@
               srcset="./img/map/map-desk.png 1x, ./img/map/map-desk@2x.png 2x" width="1240" height="486">
             <source type="image/webp" media="(min-width: 768px)"
               srcset="./img/map/map-tab.png 1x, ./img/map/map-tab@2x.png 2x" width="678" height="500">
-            <source type="image/webp" srcset="./img/map/map@2x.png" width="368" height="240" alt="">
+            <source type="image/webp" srcset="./img/map/map@2x.png" width="368" height="240">
 
             <source type="image/png" media="(min-width: 1440px)"
               srcset="./img/map/map-desk.png 1x, ./img/map/map-desk@2x.png 2x" width="1240" height="486">
             <source type="image/png" media="(min-width: 768px)"
               srcset="./img/map/map-tab.png 1x, ./img/map/map-tab@2x.png 2x" width="678" height="500">
-            <img src="./img/map/map.png" srcset="./img/map/map@2x.png" width="368" height="240" alt="">
+            <img src="./img/map/map.png" srcset="./img/map/map@2x.png" width="368" height="240" alt="Карта проезда.">
           </picture>
         </div>
       </div>
     </section>
     <section class="form" data-test="form">
       <div class="form__container">
-        <!-- <div class="form__wrapper">
-          <h2 class="form__title title">Напишите нам</h2>
-          <p class="form__text">Оставьте ваши контакты, если у вас
-            остались вопросы — мы на них ответим!</p>
-          <form class="form__blank" action="https://echo.htmlacademy.ru/.">
-            <label class="form__label">Имя<input class="form__input form__input--name" type="text" name="name"
-                pattern="^[а-яА-Я\s]+$" title="Поле должно содержать только буквы и пробелы" required
-                id=""></label>
-            <label class="form__label">Телефон<input class="form__input form__input--tel" type="tel" name="tel" pattern="^[+78][0-9]{10}$"
-                title="Пожалуйста, введите номер телефона в формате +7XXXXXXXXXX"></label>
-            <label class="form__label">Ваше сообщение<textarea class="form__input form__input--text" name="message"
-                rows="3" id=""></textarea></label>
-            <label class="form__label form__select form__select--closed">Выберите город
-              <input class="form__input form__input-select" type="text" readonly required autocomplete="off"><span
-                class="form__select-marker"></span>
-              <ul class="form__select-list" tabindex="-1">
-                <li class="form__select-item" tabindex="0">Екатеринбург</li>
-                <li class="form__select-item" tabindex="0">Санкт-Петербург</li>
-                <li class="form__select-item" tabindex="0">Москва</li>
-                <li class="form__select-item" tabindex="0">Казань</li>
-              </ul>
-            </label>
-            <label class="form__agree" for="agree"><span class="form__agree-marker"></span><input
-                class="form__agree-input" type="checkbox" name="agree" id="agree" required>Я согласен на обработку
-              моих<br> персональных<br>
-              данных</label>
-            <button class="form__button button" type="submit">Отправить<span
-                class="form__button-marker button__marker"></span></button>
-          </form>
-        </div> -->
         <div class="form__wrapper pop-up">
           <h2 class="form__title pop-up__title title">Напишите нам</h2>
           <p class="form__text pop-up__text">Оставьте ваши контакты, если у вас
             остались вопросы — мы на них ответим!</p>
-          <form class="pop-up__blank" action="https://echo.htmlacademy.ru/.">
+          <form class="form__blank pop-up__blank" action="https://echo.htmlacademy.ru/." method="post">
             <label class="form__label pop-up__label">Имя<input class="form__input pop-up__input pop-up__input--name"
                 type="text" name="name" pattern="^[а-яА-Я\s]+$" title="Поле должно содержать только буквы и пробелы"
-                required id=""></label>
+                required>
+            </label>
             <label class="form__label pop-up__label">Телефон<input class="form__input pop-up__input pop-up__input--tel"
-                type="tel" name="tel" pattern="^[+78][0-9]{10}$"
-                title="Пожалуйста, введите номер телефона в формате +7XXXXXXXXXX"></label>
-            <label class="form__label pop-up__label">Ваше сообщение<textarea
-                class="form__input pop-up__input pop-up__input--text" name="message" rows="3" id=""></textarea></label>
-            <label class="form__label form__select pop-up__label pop-up__select form__select--closed">Выберите город
-              <input class="form__input pop-up__input pop-up__input-select" type="text" readonly required
-                autocomplete="off"><span class="form__select-marker pop-up__select-marker"></span>
+                type="tel" name="tel" pattern="^[+7][0-9]{11}$"
+                title="Пожалуйста, введите номер телефона в формате +7XXXXXXXXXX" required>
+            </label>
+            <div class="pop-up__input-wrapper">
+              <label class="form__label pop-up__label" for="form-textarea">Ваше сообщение</label>
+              <textarea class="form__input pop-up__input pop-up__input--text" name="message" id="form-textarea" rows="3"
+                minlength="3" required></textarea>
+            </div>
+            <div class="pop-up__input-wrapper form__input-wrapper select-wrapper">
+              <label class="form__label pop-up__label" for="form-select">Выберите город</label>
+              <input class="form__select pop-up__input pop-up__select pop-up__select--closed" type="text" name="text"
+                id="form-select" readonly required autocomplete="off"><span
+                class="form__select-marker pop-up__select-marker"></span>
               <ul class="form__select-list pop-up__select-list" tabindex="-1">
                 <li class="pop-up__select-item" tabindex="0">Екатеринбург</li>
                 <li class="pop-up__select-item" tabindex="0">Санкт-Петербург</li>
                 <li class="pop-up__select-item" tabindex="0">Москва</li>
                 <li class="pop-up__select-item" tabindex="0">Казань</li>
               </ul>
-            </label>
-            <label class="form__agree pop-up__agree" for="agree"><span
-                class="form__agree-marker pop-up__agree--marker"></span><input class="pop-up__agree-input"
-                type="checkbox" name="agree" id="agree" required>Я согласен на обработку
-              моих<br> персональных<br>
-              данных</label>
-            <button class="form__button button" type="submit">Отправить<span
+            </div>
+            <div class="pop-up__agree-wrapper">
+              <label class="form__agree pop-up__agree" for="form-agree">Я согласен на обработку
+              моих <br>персональных <br>данных</label>
+              <input class="form__agree-input pop-up__agree-input" type="checkbox" name="agree" id="form-agree">
+              <span class="form__agree-marker pop-up__agree-marker"></span>
+            </div>
+            <button class="form__button pop-up__button button" type="submit">Отправить<span
                 class="form__button-marker button__marker"></span></button>
           </form>
         </div>
@@ -804,27 +803,25 @@
   <footer class="footer" data-test="footer">
     <div class="footer__wrapper">
       <picture>
-        <source type="image/webp" srcset="./img/logo.webp 1x, ./img/logo@2x.webp" width="52" height="52">
-        <img src="./img/logo.png" srcset="./img/logo@2x.png" width="52" height="52" alt="Логотип.">
+        <img class="footer__logo" src="./img/logo.svg" width="52" height="52" alt="Логотип.">
       </picture>
       <div class="footer__nav nav">
         <ul class="footer__list nav__list">
-          <li class="footer__item nav__item"><a>О проекте</a></li>
-          <li class="footer__item nav__item"><a class="nav__link">Программы</a>
+          <li class="footer__item nav__item"><a class="nav__link" href="#about">О проекте</a></li>
+          <li class="footer__item nav__item"><a class="nav__link" href="#programs">Программы</a>
           </li>
-          <li class="footer__item nav__item"><a>Как поехать</a></li>
-          <li class="footer__item nav__item"><a>Отзывы</a></li>
-          <li class="footer__item nav__item"><a class="nav__link">Новости</a>
+          <li class="footer__item nav__item"><a class="nav__link" href="#grant">Как поехать</a></li>
+          <li class="footer__item nav__item"><a class="nav__link" href="#reviews">Отзывы</a></li>
+          <li class="footer__item nav__item"><a class="nav__link" href="#news">Новости</a>
           </li>
-          <li class="footer__item nav__item"><a>Контакты</a></li>
+          <li class="footer__item nav__item"><a class="nav__link" href="#contacts">Контакты</a></li>
         </ul>
       </div>
     </div>
     <div class="footer__privacy">
-      <a class="footer__privacy-link" href="">Политика конфиденциальности</a>
+      <a class="footer__privacy-link" href="#">Политика конфиденциальности</a>
       <p class="footer__privacy-text">Стажировка © 2023 Все права защищены</p>
     </div>
-
     <div class="footer__socials socials">
       <ul class="socials__list">
         <li><a class="socials__link socials__link--vk" href="https://vk.com/"><span

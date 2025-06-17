@@ -3,6 +3,7 @@
 
 .hero__slider {
   @include m.list-reset;
+
   position: relative;
 }
 
@@ -24,6 +25,7 @@
 
 .hero__slide {
   @include m.container;
+
   min-height: 568px;
   padding-top: 100px;
   padding-bottom: 20px;
@@ -50,6 +52,7 @@
 
 .hero__wrapper {
   @include m.container;
+
   display: grid;
   padding: 0;
   z-index: 2;
@@ -83,7 +86,7 @@
 
   @include m.tablet {
     width: 659px;
-    padding: 30px 40px 24px 40px;
+    padding: 30px 40px 24px;
     border-top-right-radius: 30px;
     border-bottom-right-radius: 30px;
 
@@ -97,7 +100,11 @@
 
   @include m.desktop {
     width: 968px;
-    padding: 40px 50px 30px 50px;
+    padding: 40px 50px 30px;
+
+    &::after {
+      right: 170px;
+    }
   }
 }
 
@@ -106,8 +113,9 @@
   gap: 15px;
   width: 267px;
   background-color: v.$nero;
-  padding: 0 14px 10px 14px;
+  padding: 0 14px 10px;
   border-bottom-left-radius: 14px;
+
   --nb-r: 14px;
   --nb-w: 55px;
   --nb-h: 36px;
@@ -115,9 +123,10 @@
   @include m.tablet {
     width: 593px;
     grid-template-columns: 1fr max-content;
-    padding: 0 40px 35px 40px;
+    padding: 0 40px 35px;
     border-bottom-left-radius: 30px;
     gap: 74px;
+
     --nb-r: 30px;
     --nb-w: 0px;
     --nb-h: -60px;
@@ -168,6 +177,7 @@
 
 .hero__button {
   justify-self: flex-start;
+  text-decoration: none;
 }
 
 .hero__pagination {

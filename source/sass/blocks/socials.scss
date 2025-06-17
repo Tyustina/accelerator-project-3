@@ -10,12 +10,11 @@
   gap: 10px;
 
   @include m.tablet {
-    gap: 15px;
     justify-content: flex-end;
   }
 
   @include m.desktop {
-    gap: 10px;
+    gap: 20px;
     margin: 0;
   }
 }
@@ -47,15 +46,12 @@
   mask-image: url("/__spritemap#sprite-vk-view");
   mask-repeat: no-repeat;
   mask-size: cover;
+  mask-position: center;
 
   @include m.tablet {
     width: 16px;
     height: 16px;
   }
-
-  // &:hover {
-  //   background-color: v.$white;
-  // }
 }
 
 .socials__link--ok::after {
@@ -70,6 +66,7 @@
   mask-image: url("/__spritemap#sprite-ok-view");
   mask-repeat: no-repeat;
   mask-size: cover;
+  mask-position: center;
 
   @include m.tablet {
     width: 12px;
@@ -83,33 +80,16 @@
   left: 50%;
   transform: translate(-50%, -50%);
   content: "";
-  width: 12px;
+  width: 10px;
   height: 12px;
   background-color: v.$nero;
   mask-image: url("/__spritemap#sprite-reddit-view");
   mask-repeat: no-repeat;
   mask-size: cover;
+  mask-position: center;
 
   @include m.tablet {
     width: 16px;
     height: 16px;
   }
 }
-
-// .socials__link:hover {
-// }
-
-// .socials__link:focus,
-// .socials__link:focus-visible {
-// }
-
-// .socials__link:active {
-// }
-
-// .socials__link--disabled {
-// }
-
-// .socials__link--vk:hover::after,
-// .socials__link--reddit:hover::after,
-// .socials__link--ok:hover::after {
-// }

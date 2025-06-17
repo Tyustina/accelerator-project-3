@@ -7,18 +7,19 @@
   background-color: v.$mariner;
 
   @include m.tablet {
-      padding-top: 100px;
-  padding-bottom: 100px;
+    padding-top: 100px;
+    padding-bottom: 100px;
   }
 
-    @include m.desktop {
-      padding-top: 120px;
-  padding-bottom: 120px;
+  @include m.desktop {
+    padding-top: 120px;
+    padding-bottom: 120px;
   }
 }
 
 .contacts__container {
   @include m.container;
+
   display: grid;
 }
 
@@ -30,18 +31,21 @@
   @include m.tablet {
     gap: 30px;
   }
+
   @include m.desktop {
     flex-direction: row;
     justify-content: space-between;
   }
 }
+
 .contacts__title {
   color: v.$nero;
 }
 
 .contacts__list {
   @include m.list-reset;
-    display: flex;
+
+  display: flex;
   flex-direction: column;
   gap: 20px;
   color: v.$nero;
